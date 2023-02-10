@@ -1,0 +1,58 @@
+{% if product.metafields.accentuate.show_information_module %}
+				<div class="textholder">
+                
+					{{ product.metafields.accentuate.product_description }} 
+      
+				</div>
+				{% endif %}
+				
+				{% if product.metafields.accentuate.product_guarantee %}
+				<div class="guarantee-block">
+					<a href="javascript: void(0)">Our guarantee</a>
+					<div class="guarantee-content">{{ product.metafields.accentuate.product_guarantee }}</div>
+				</div>
+				{% endif %}
+				{% if product.metafields.accentuate.scent_tab_repeater_title %}
+				<div class="guarantee-block scents-tab">
+					<a href="javascript: void(0)">Scents</a>
+					<div class="guarantee-content">
+						<div class="tab-content scent-content" data-value="tab-1">
+							<div class="textholder">
+							  <ul class="colors-list">
+								  
+								{% for value in product.metafields.accentuate.scent_tab_repeater_title %} 
+								<li class="{{ value }} {% if forloop.index0 == 0%}active{% endif %}" data-value="{{ value }}">
+									{{ value }}
+								 
+								</li> 
+								{% endfor %}
+							  </ul>
+							  {% for value in product.metafields.accentuate.scent_tab_repeater_title %} 
+								<div class="scent-tab-item-content  {% if forloop.first == true %} active{% endif %}" data-value="{{value}}">
+								  <p>{{ product.metafields.accentuate.scent_tab_repeater_content[forloop.index0] }}</p>
+								</div>
+							  {% endfor %}
+							 
+					
+							</div>
+							<div class="img-holder lazyload" data-bg="{{product.metafields.accentuate.scent_tab_image}}" style="background-image:url({{product.metafields.accentuate.scent_tab_image}});">
+							</div>
+						  </div>
+
+					</div>
+				</div>
+				{% endif %}
+
+				{% if product.metafields.accentuate.show_information_module %}
+				<div class="guarantee-block recommended active">
+					<a href="javascript: void(0)">FREQUENTLY BOUGHT TOGETHER</a>
+					<div class="guarantee-content">
+
+						<div id="w3-product-accessories" data-product-handle="{{ product.handle }}">
+		                    <div id="w3-money-format" style="display:none;">{{ shop.money_format }}</div>
+		                </div>
+		            </div>
+				</div>
+				{% endif %}
+              
+              	<a class="btn-fbt-add" href="javascript: void(0)">Add Items To Cart</a>

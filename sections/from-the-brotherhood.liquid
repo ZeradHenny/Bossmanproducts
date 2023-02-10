@@ -1,0 +1,135 @@
+<div class="title-head row">
+<h2>From The Brotherhood</h2>
+
+<span class="pagingInfo"></span>
+
+</div>
+
+<div class="frombrotherhood-wrapper">
+<div class="frombrotherhood-slider">
+
+        {% for block in section.blocks %}
+
+                <div class="brother-testimonial">
+                    <span class="reviews-stars"></span>
+                    <p class="review-text">{{ block.settings.testimonial }}</p>
+                    <h4>
+                        <span class="customer-name">{{ block.settings.name }} on </span>
+                        <span class="product-name">{{ block.settings.reviewed_product.title }}</span></h4>
+                        <div class="review-bottom">
+                            <a href="{{ block.settings.reviewed_product.url }}" class="btn product-btn"> SHOP {{ block.settings.reviewed_product.title }} </a>
+                            <a href="/pages/reviews" class="more-reviews-link">read more</a>
+                        </div>
+                        
+                    <!-- <span>Member Since {{ block.settings.member_since }}</span> -->
+                </div>
+        {% endfor %}
+</div>
+</div>
+<script>
+  $('.frombrotherhood-slider').on('init', function(event, slick){
+	    $('.frombrotherhood-slider.slick-initialized').css({'opacity': '1', 'visibility': 'visible'});
+  	});
+
+      var $status = $('.pagingInfo');
+      var $slickElement = $('.frombrotherhood-slider');
+
+      // $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+      //   //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+      //   var i = (currentSlide ? currentSlide : 0) + 1;
+      //   $status.html('<span class="next"><</span>' + i + '<span>/</span>' + slick.slideCount + '<span class="prev">></span>')
+      // });
+      $('.frombrotherhood-slider').slick({
+        dots: true,
+        arrows: false,
+        autoplay: false,
+        infinite: true,
+        speed: 500,
+        autoplaySpeed: 8000,
+        slidesToShow: 3,
+        slidesToScroll: 1,        
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 1000,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+         
+        ]
+      });
+      $('.prev').click(function(){
+        $('.frombrotherhood-slider').slick('slickPrev');
+      });
+      
+      $('.next').click(function(){
+        $('.frombrotherhood-slider').slick('slickNext');
+      });
+
+</script>
+
+
+
+
+
+{% schema %}
+{
+    "name": "From the Brotherhood",
+    "settings": [
+        
+    ],
+    "blocks": [
+        {
+            "type": "richtext",
+            "name": "Reviews",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "testimonial",
+                    "label": "Review"
+                },
+                {
+                    "type": "text",
+                    "id": "name",
+                    "label": "Member Name"
+                },
+                {
+                    "type": "text",
+                    "id": "member_since",
+                    "label": "Member Since"
+                },
+                {
+                    "type": "product",
+                    "id": "reviewed_product",
+                    "label": "Product"
+                }
+
+            ]
+        }
+    ],
+  "presets": [
+        {
+            "name": "From the Brotherhood",
+            "category": "Reviews"
+        }
+    ]
+}
+{% endschema %}
+

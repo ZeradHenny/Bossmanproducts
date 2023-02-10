@@ -1,0 +1,133 @@
+{
+  "sections": {
+    "main": {
+      "type": "faq-header",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/faq-bg_2x_13033e76-2a28-4919-b588-1dcb0c7ced2a.jpg",
+        "title": "Bossman Frequently Asked Questions"
+      }
+    },
+    "faq": {
+      "type": "faq-content",
+      "blocks": {
+        "fe27b6c7-4009-4540-b129-18b5ac426f6d": {
+          "type": "content",
+          "settings": {
+            "heading": "SHIPPING & DELIVERY",
+            "sub_heading1": "How do I know my order has shipped?",
+            "content1": "You’ll receive an email from Bossman letting you know your order has shipped with your tracking number. If you do not receive an email from us, please contact customer service at support@bossmanbrand.com",
+            "sub_heading2": "What is the average delivery time?",
+            "content2": "<p>Delivery time varies based on location, demand, and shipping preference selected. For standard shipping, you can expect products to ship within 4-7 business days for domestic orders and 1-8 weeks for international orders. <\/p>\n<p>For expedited shipping, you will receive your products in 3-4 business days. <\/p>\n<p>For business shipping, you can expect your delivery in 2 business days. If you place your order after 1 PM, it will be processed the following day. \n<\/p>",
+            "sub_heading3": "What if I put in the wrong address?",
+            "content3": "If you haven’t yet received your tracking number yet, give us a call and we’ll get it adjusted before it is shipped. If you have received your tracking number, try to get in contact with the shipping company to reroute the package or request it be sent back.",
+            "sub_heading4": "Can I track my package?",
+            "content4": "Yes, you can. You will receive a tracking number when your package has been shipped.",
+            "sub_heading5": "",
+            "content5": ""
+          }
+        },
+        "d4edda4b-10ca-4321-8094-0d29d9b116b0": {
+          "type": "content",
+          "settings": {
+            "heading": "RETURNS",
+            "sub_heading1": "What is your return policy?",
+            "content1": "You have 30 days to return an item from the date you received it. To be eligible for a return, your item must have been purchased within the last 30 days of the original order. Your item must be in the original packaging. Your item needs to have the receipt or proof of purchase.",
+            "sub_heading2": "Who pays shipping for returns?",
+            "content2": "You will be responsible for paying for your own shipping costs for returning your item. Shipping costs are non­-refundable. If you receive a refund, the cost of return shipping will be deducted from your refund.",
+            "sub_heading3": "How do I get a refund?",
+            "content3": "Once we receive your item, we will inspect it and notify you that we have received your returned item. We will immediately notify you of the status of your refund after inspecting the item. If your return is approved, we will initiate a refund to your credit card (or original method of payment). You will receive the credit within 3 to 5 business days, depending on your card issuer’s policies.",
+            "sub_heading4": "",
+            "content4": "",
+            "sub_heading5": "",
+            "content5": ""
+          }
+        },
+        "d2492a5c-f7cd-4e9e-8ebd-2d13d9c6130d": {
+          "type": "content",
+          "settings": {
+            "heading": "PAYMENT",
+            "sub_heading1": "What types of payments do you accept?",
+            "content1": "We currently accept American Express, MasterCard, Visa, Discover, PayPal, and more.",
+            "sub_heading2": "",
+            "content2": "",
+            "sub_heading3": "",
+            "content3": "",
+            "sub_heading4": "",
+            "content4": "",
+            "sub_heading5": "",
+            "content5": ""
+          }
+        },
+        "6cc0dd15-a09b-40f4-8d23-c3a0dc7c0423": {
+          "type": "content",
+          "settings": {
+            "heading": "CONTACT US",
+            "sub_heading1": "How do I contact customer service?",
+            "content1": "You can submit a form to our customer support team <a href=\"https:\/\/bossmanbrand.com\/pages\/contact-us\" class=\"normal-link\">at this link<\/a>, call us at <a href=\"tel:(512)%20937-2677\" class=\"normal-link\">(512) 937-2677<\/a>, or send an email to support@bossmanbrand.com.",
+            "sub_heading2": "Who do I contact about investments?",
+            "content2": "You can contact us about investments <a href=\"https:\/\/bossmanbrand.com\/pages\/contact-us\" class=\"normal-link\">at this link<\/a>, call us at <a href=\"tel:(512)%20937-2677\" class=\"normal-link\">(512) 937-2677<\/a>, or send an email to support@bossmanbrand.com.",
+            "sub_heading3": "How do I get in touch about job opportunities or influencer programs?",
+            "content3": "You can contact us about job opportunities and influencer programs <a href=\"https:\/\/bossmanbrand.com\/pages\/contact-us\" class=\"normal-link\">at this link<\/a>, call us at <a href=\"tel:(512)%20937-2677\" class=\"normal-link\">(512) 937-2677<\/a>, or send an email to support@bossmanbrand.com.",
+            "sub_heading4": "",
+            "content4": "",
+            "sub_heading5": "",
+            "content5": ""
+          }
+        },
+        "70b80755-37a4-4298-8fc8-0b959a9289e8": {
+          "type": "content",
+          "settings": {
+            "heading": "PRODUCTS",
+            "sub_heading1": "What ingredients are used in your products?",
+            "content1": "We use all-natural ingredients and can assure you all Bossman products have no harsh chemicals or foaming agents in them.",
+            "sub_heading2": "Are your products safe?",
+            "content2": "While we encourage everyone to read through the ingredients to ensure they aren’t allergic to anything in our products, we use high-quality natural ingredients in all Bossman products.",
+            "sub_heading3": "Are your products tested on animals?",
+            "content3": "Our products are not tested on animals.",
+            "sub_heading4": "Where are your products made?",
+            "content4": "Our beard care products are made in the USA while some of our accessories are manufactured in China.",
+            "sub_heading5": "",
+            "content5": ""
+          }
+        },
+        "fc46387e-303b-41e2-bb9d-5c26247777ba": {
+          "type": "content",
+          "settings": {
+            "heading": "WORK WITH US",
+            "sub_heading1": "Do you have any job openings?",
+            "content1": "Send us a message <a href=\"https:\/\/bossmanbrand.com\/pages\/contact-us\" class=\"normal-link\">at this link<\/a>, call us at <a href=\"tel:(512)%20937-2677\" class=\"normal-link\">(512) 937-2677<\/a>, or send an email to support@bossmanbrand.com to inquire about opportunities to work with the Bossman Brands Team.",
+            "sub_heading2": "How do I become an influencer\/brand ambassador?",
+            "content2": "Send us a message <a href=\"https:\/\/bossmanbrand.com\/pages\/contact-us\" class=\"normal-link\">at this link<\/a>, call us at <a href=\"tel:(512)%20937-2677\" class=\"normal-link\">(512) 937-2677<\/a>, or send an email to support@bossmanbrand.com to inquire about opportunities to become an influencer or brand ambassador.",
+            "sub_heading3": "",
+            "content3": "",
+            "sub_heading4": "",
+            "content4": "",
+            "sub_heading5": "",
+            "content5": ""
+          }
+        }
+      },
+      "block_order": [
+        "fe27b6c7-4009-4540-b129-18b5ac426f6d",
+        "d4edda4b-10ca-4321-8094-0d29d9b116b0",
+        "d2492a5c-f7cd-4e9e-8ebd-2d13d9c6130d",
+        "6cc0dd15-a09b-40f4-8d23-c3a0dc7c0423",
+        "70b80755-37a4-4298-8fc8-0b959a9289e8",
+        "fc46387e-303b-41e2-bb9d-5c26247777ba"
+      ],
+      "settings": {}
+    },
+    "faq-footer": {
+      "type": "faq-get-help",
+      "settings": {
+        "button_text": "Get Help",
+        "button_url": "shopify:\/\/pages\/contact-us"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "faq",
+    "faq-footer"
+  ]
+}

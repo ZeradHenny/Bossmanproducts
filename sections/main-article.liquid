@@ -1,0 +1,394 @@
+{% assign s = section.settings %}
+{%- paginate blog.articles by 250 -%}
+
+<div class="blog-list"> 
+    <ul>
+        {% for tag in blog.all_tags %}
+            {% if article.tags.first contains tag %}
+            <li class="active blog-tag" data-value="{{tag | handle}}">{{ tag | replace: 'Beard', '' | upcase }}</li>
+            {% else %}
+            <li class="blog-tag" data-value="{{tag | handle}}">{{ tag | replace: 'Beard', '' | upcase | link_to_tag: tag }}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+  
+  	<div class="tags-blog-block">
+        {% for tag in blog.all_tags %}
+            {% assign count = 0 %}
+            <div class="tag-blog-item" data-value="{{tag | handle}}">
+                <div class="tag-blog-background">
+                    <div class="tag-blog-option">
+                        {% for article in blog.articles limit:250 %}
+                            {% if article.tags contains tag %}
+                            {% assign count = count | plus: 1 %}
+                                {% if count < 4 %}
+                                    
+                                    {% if article.image %}
+                                        <a href="{{ article.url }}">
+                                            {{ article | img_url: '640x335' | img_tag: article.title }}
+                                            <h2>{{ article.title }}</h2>
+                                        </a>
+                                    {% endif %}
+
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <div class="tag-blog-all">
+                        <a href="/blogs/blog/tagged/{{tag | handle}}">Read All</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    {% if article.tags.first != blank %}
+    <div class="current-category">
+        <h3 class"ibn_mb">{{ article.tags.first | replace: 'Beard', '' | upcase }}</h3>
+                
+     </div>
+    {% endif %}
+</div>
+
+<section class="article">
+    <div class="article__header">
+        <div class="container">
+            <div class="article-image">
+                {{ article.image | img_url: 'master' | img_tag: 'lazyload' }}
+            </div>
+
+            <div class="article-meta">
+                <div class="blog-search-form">
+                    <form action="/search?view=blogs" method="get" class="search-form" role="search">
+                        <input type="hidden" name="view" value="blogs" >
+                        <input type="text" name="q" value="" placeholder="SEARCH BLOGS...">
+                    </form>
+                </div>
+                <span class="category">{{ article.tags.first | replace: 'Beard', '' | upcase }}</span>
+                
+                <h1 class="title">{{ article.title | escape }}</h1>
+                
+                <div class="social-links">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="article__content">
+        <div class="container">
+            <div class="article__content--sidebar sticky">
+                <div class="blocks-wrapper">
+                    {% if article.tags.size > 0 and s.show_categories  %}
+                        <div class="block">
+                            <span>CATEGORY</span>
+                            {% for tag in article.tags %}
+                          <p>{{ tag | replace: 'Beard', '' | link_to_tag: tag }}</p>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+					
+                  	{% comment %}
+                    {% if article.excerpt.size > 0 and show_excerpt %}
+                        <div class="block">
+                            <span>EXCERPT</span>
+                            <p>{{ article.excerpt }}</p>
+                        </div>
+                    {% endif %}
+
+                    {% if section.blocks.size > 0 and s.show_featured_products %}
+                        <div class="block">
+                            <span>FEATURED PRODUCTS</span>
+                        </div>
+                    {% endif %}
+                  	{% endcomment %}
+                </div>
+              
+                {% if article.metafields.accentuate.show_featured_products %}
+                    {% assign selected_handles = article.metafields.accentuate.featured_product | remove : '["' | remove : '"]' | split: '|' %}
+
+                    <div class="block">
+                        <span>FEATURED PRODUCTS</span>
+                    </div>
+
+                    <div class="featured-products-wrapper">
+                      
+                        {% for selected_handle in selected_handles %}
+                            {% assign p = all_products[selected_handle] %}
+                           
+                            {% assign on_sale = false %}
+                            {% if p.compare_at_price > p.price %}
+                                {% assign on_sale = true %}
+                            {% endif %}
+                        
+                            <div class="featured-product-block">
+                                <div class="img-wrapper">
+                                    <a href="{{ p.url }}" title="{{ p.title }}">
+                                        <img src="{{ p.featured_image.src | img_url: '1000x' }}" alt="{{ p.title }}">
+                                    </a>
+                                </div>
+                                <div class="product-meta">
+                                    <h4><a href="{{ p.url }}">{{ p.title }}</a></h4>
+                                    <p class="price">
+                                        {% if on_sale %}
+                                            <span class="current_price">{{ p.price | money }}</span>
+                                            <span class="sale was_price">{{ p.compare_at_price | money }}</span>
+                                        {% else %}
+                                            <span>{{ p.price | money }}</span>
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            </div>
+                        {% endfor %}
+
+                    </div>
+                {% endif %}
+
+                {% comment %}
+                {% if section.blocks.size > 0 and s.show_featured_products %}
+                    <div class="featured-products-wrapper">
+                        {% for block in section.blocks limit: s.max_products  %}
+                            {% assign b = block.settings %}
+                            {%- if b.featured_product != blank -%}
+                                {%- assign p = all_products[b.featured_product] -%}
+                                <div class="featured-product-block">
+                                    <div class="img-wrapper">
+                                        {{ p.featured_image | img_url: '130x', scale: '2x' | img_tag: 'lazyload' }}
+                                    </div>
+
+                                    <div class="product-meta">
+                                        <h4>{{ p.title | escape }}</h4>
+                                        <span>{{ p.price | money }}</span>
+                                    </div>
+                                </div>
+                            {%- endif -%}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+                {% endcomment %}
+            </div>
+
+            <div class="article__content--copy">
+                {% include 'hypervisual' %}
+                {{ article.content }}
+            </div>
+        </div>
+    </div>
+</section>
+{%- endpaginate -%}
+
+{% schema %}
+{
+  "name": "Posts",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_categories",
+      "label": "Show categories",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_excerpt",
+      "label": "Show excerpt",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_featured_products",
+      "label": "Show featured products",
+      "default": true
+    }
+  ]
+}
+{% endschema %}
+<style>
+  .blog-list h3{
+    color: #bd934a;
+    font-family: 'Proxima Nova Bold';
+    font-size: 48px;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0 0 40px;
+    line-height: 1;  
+} 
+.article__content--copy h2 {
+    font-size: 29px;
+}
+  .article__header {
+    background: #f1f1f1;
+    position: relative;
+}
+.article__header .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+.article__header .article-image {
+    width: 50%;
+    font-size: 0;
+    position: relative;
+}
+.article__header .article-image img {
+    width: 100%;
+    max-width: 100%;
+    vertical-align: bottom;
+    height: 600px;
+    object-fit: cover;
+}
+.article__header .article-meta {
+    width: 50%;
+}
+.article__header .article-meta .blog-search-form {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.article__header .article-meta .blog-search-form form input {
+    color: #0b0d0d;
+    border-color: #0b0d0d;
+}
+.blog-search-form form input {
+    color: #fff;
+    font-family: 'Proxima Nova Regular';
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 5.5px 11px;
+    outline: none;
+    border: 1px solid #fff;
+    background: transparent;
+    width: 100%;
+    max-width: 210px;
+    min-width: 210px;
+}
+.article__header .article-meta .category {
+    color: #000;
+    font-family: 'Proxima Nova Bold';
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 0;
+    text-align: center;
+    display: block;
+    margin-bottom: 46px;
+}
+.article__header .article-meta .title {
+    color: #0b0d0d;
+    font-family: 'Bely';
+    font-size: 71px;
+    font-weight: 700;
+    line-height: 78px;
+    text-align: center;
+    max-width: 480px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.article__content {
+    background-color: #fff;
+    padding-top: 100px;
+}
+.article__content .container {
+    width: 100%;
+    max-width: 1480px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    padding: 0 20px;
+}
+.article__content--sidebar {
+    max-width: 300px;
+    width: 100%;
+}
+.article__content--copy {
+    width: 100%;
+    max-width: 600px;
+    margin-left: 430px;
+}
+.article__content--copy h3 {
+    font-size: 23px;
+    margin-top: 35px;
+}
+.article__content--copy h5, .article__content--copy h6 {
+    font-size: 16px;
+}
+.article__content--copy h1, .article__content--copy h2, .article__content--copy h3, .article__content--copy h4, .article__content--copy h5, .article__content--copy h6 {
+    color: #0b0d0d;
+    font-family: 'Bely';
+    line-height: 1.2;
+    letter-spacing: 0;
+    font-weight: 700;
+    margin: 0 0 20px;
+}
+.article__content--copy p {
+    color: #0b0d0d;
+    font-family: 'Proxima Nova Regular';
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 32px;
+}
+  .article__content--copy h3 {
+    font-size: 23px;
+    margin-top: 35px;
+}
+  .article__content--copy p a {
+    text-decoration: none;
+    color: #bd934a;
+}
+
+.article__content--copy li, .article__content--copy a {
+    font-family:' 'Proxima Nova Regular';
+    font-size: 15px;
+    line-height: 1.8;
+}
+</style>
+<script>
+ $(window).on('scroll', function() {
+	    
+		
+      
+	    if ($('.article__content').length != 0) {
+          if ($('.article__content--sidebar .blocks-wrapper').html().trim() != "") {
+          	if ($(window).width() > 768) {
+              var contentTop = $('.article__content').offset().top;
+              var $sticky = $('.article__content--sidebar');
+              var $stickyrStopper = $('.sticky-stopper');
+              if (!!$sticky.offset()) {
+
+                var generalSidebarHeight = $sticky.innerHeight();
+                var stickyTop = $sticky.offset().top;
+                var stickOffset = 0;
+                var stickyStopperPosition = $stickyrStopper.offset().top;
+                var stopPoint = stickyStopperPosition - generalSidebarHeight - stickOffset;
+                var diff = stopPoint + stickOffset;
+
+                $(window).scroll(function(){ // scroll event
+                  var windowTop = $(window).scrollTop(); // returns number
+
+                  if (stopPoint < windowTop) {
+                    $sticky.css({ position: 'absolute', top: diff });
+
+                  } else if (contentTop < windowTop+stickOffset+2) {
+                    $sticky.css({ position: 'fixed', top: stickOffset+100 });
+                  } else {
+                    $sticky.css({position: 'absolute', top: 'initial'});
+                    $('.article__content--copy').css('margin-left', '430px');
+                  }
+                });
+              }
+            }
+          } 
+          
+	    }
+	});
+  if (($('.article__content--sidebar .blocks-wrapper').length != 0) && ($('.article__content--sidebar .blocks-wrapper').html().trim() == "")) {
+    
+    $('.article__content--sidebar').addClass('no-article-category');
+    $('.article__content--copy').addClass('no-article-category');
+  }
+</script>

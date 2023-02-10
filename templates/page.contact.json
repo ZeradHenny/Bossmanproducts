@@ -1,0 +1,31 @@
+{
+  "sections": {
+    "main": {
+      "type": "contact-header",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/contact_hero_2x_b3844824-6ac4-4c99-8e60-e0be48b8d0ab.jpg",
+        "title": "Contact Us",
+        "post_title": "Have a question about products, shipping or returns?",
+        "link_title": "EXPLORE OUR FAQs",
+        "link_url": "shopify:\/\/pages\/faq"
+      }
+    },
+    "contact": {
+      "type": "contact",
+      "settings": {}
+    },
+    "contactbottom": {
+      "type": "contact-bottom",
+      "settings": {
+        "title": "Need more help?",
+        "link_title": "Contact Support",
+        "link_url": "mailto:support@bossmanbrand.com"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "contact",
+    "contactbottom"
+  ]
+}

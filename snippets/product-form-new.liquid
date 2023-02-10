@@ -1,0 +1,181 @@
+ {% assign sca_product = product %}{% assign sca_product_id_text = "," | append : sca_product.id | append : "," %}{% assign sca_price = sca_product.price %}{% assign sca_price_min = sca_product.price_min %}{% assign sca_price_max = sca_product.price_max %}{% assign sca_compare_at_price = sca_product.compare_at_price %}{% assign sca_compare_at_price_min = sca_product.compare_at_price_min %}{% assign sca_compare_at_price_max = sca_product.compare_at_price_max %}{% assign sca_product_available = sca_product.available %}{% assign sca_product_variantCount = sca_product.variants.size %}{% assign sca_compare_at_price_varies = sca_product.compare_at_price_varies %}{% assign sca_price_varies = sca_product.price_varies %}{% assign sca_has_only_default_variant = false %}{% capture sca_product_variants_json %}{{sca_product.variants | json }}{% endcapture %} {% capture sca_product_json %}{ {% if sca_all_gift_products_ids == null or sca_all_gift_products_ids contains sca_product_id_text %}{% assign sca_product_available = false %}{% assign sca_product_variantCount = 0 %}{% assign sca_has_only_default_variant = true %}{% assign sca_is_first_variant = true %}{% capture sca_variants_json %} [{% for variant in sca_product.variants %}{% unless variant.metafields.secomapp.freegifts %}{% unless variant.title contains '(Freegifts)' %}{% unless variant.title contains '% Off' %}{% unless variant.metafields.shappify_qb.qb_hide == "1" %}{% unless variant.metafields.shappify_bundle.is_bundle == "true" %}{% unless variant.metafields.brodev_scn.hide == "true" %}{% unless variant.metafields.wholesaler2.wholesale %}{% unless variant.metafields.Wholesaler.level %}{% unless variant.title contains '(Wholesale' %}{% if sca_is_first_variant%} {{ variant | json }}{% assign sca_price = variant.price %} {% assign sca_price_min = variant.price %} {% assign sca_price_max = variant.price %} {% assign sca_compare_at_price = variant.compare_at_price %} {% assign sca_compare_at_price_min = variant.compare_at_price %} {% assign sca_compare_at_price_max = variant.compare_at_price %} {% assign sca_product_available = variant.available %} {% assign sca_product_variantCount = 1 %} {% assign sca_is_first_variant = false%}{% else %},{{variant | json }} {% if sca_price_min >= variant.price %} {% assign sca_price_min = variant.price %} {% assign sca_price = variant.price %}{% endif %} {% if sca_price_max <= variant.price %} {% assign sca_price_max = variant.price %} {% endif %} {% if variant.compare_at_price %} {% if sca_compare_at_price_min==null or sca_compare_at_price_min >= variant.compare_at_price %} {% assign sca_compare_at_price_min = variant.compare_at_price %} {% assign sca_compare_at_price = variant.compare_at_price %} {% endif %} {% if sca_compare_at_price_max==null or sca_compare_at_price_max < variant.compare_at_price %} {% assign sca_compare_at_price_max = variant.compare_at_price %} {% endif %} {% endif %} {% if variant.available == true %} {% assign sca_product_available = true %} {% endif %} {% assign sca_product_variantCount = sca_product_variantCount | plus: 1 %}{% endif %}{% endunless %}{% endunless %}{% endunless %}{% endunless %}{% endunless %}{% endunless %}{% endunless %}{% endunless %}{% endunless %}{%endfor%} ]{% endcapture %}{% if sca_price_min < sca_price_max %}{% assign sca_price_varies = true %}{% else %}{% assign sca_price_varies = false %}{% endif %}{% if sca_compare_at_price_min < sca_compare_at_price_max %}{% assign sca_compare_at_price_varies = true %}{% else %}{% assign sca_compare_at_price_varies = false %}{% endif %}{% if sca_product_variantCount > 1 %}{% assign sca_has_only_default_variant = false %}{% endif %}{% if sca_product_variantCount == sca_product.variants.size %} "variants":{{ sca_product.variants }},{% else %}{%assign sca_product_variants_json = sca_variants_json %} "variants":{{ sca_variants_json }},{% endif %}{% else %} "variants":{{ sca_product_variants_json }},{% endif %} "id": {{sca_product.id}}, "title": {{sca_product.title | json}}, "handle": {{sca_product.handle | json}}, "description": {{sca_product.description | json}}, "published_at": "{{sca_product.published_at | date: "%Y-%m-%dT%H-%M-%S%:z" }}", "created_at": "{{sca_product.created_at | date: "%Y-%m-%dT%H-%M-%S%:z" }}", "vendor": {{sca_product.vendor | json}}, "type": {{sca_product.type | json}}, "tags": {{sca_product.tags | json}}, "price": {{sca_price}}, "price_min": {{sca_price_min}}, "price_max": {{sca_price_max}}, "available": {{sca_product.available}}, "price_varies": {{sca_price_varies}}, "compare_at_price": {{sca_compare_at_price}}, "compare_at_price_min": {{sca_compare_at_price_min}}, "compare_at_price_max": {{sca_compare_at_price_max}}, "compare_at_price_varies": {{sca_compare_at_price_varies}}, "images": {{sca_product.images | json}}, "featured_image": {{sca_product.featured_image | json }}, "options": {{sca_product.options | json}}, "media": {{sca_product.media | json }}, "content": {{sca_product.content | json }}} {% endcapture sca_product_json %}
+
+ {% if product.handle == 'jelly-beard-oil' or product.handle == 'beard-oil' or product.handle == 'beard-pomade' or product.handle == 'beard-balm' or product.handle == 'beard-conditioner' or product.handle == 'exfoliating-beard-body-bar-soap' or product.handle == 'beard-supplement' or product.handle == 'mustache-wax' or product.handle == 'flexfit' or product.handle == 'gym-t-shirt' or product.handle == 'heather-grey-snapback-hat' or product.handle == 'feeling-cocky-t-shirt' or product.handle == 'red-black-mesh-hat' or product.handle == 'camo-hat' or product.handle == 'black-mesh-trucker-hat' or product.handle == 'knit-black-beanie' or product.handle == 'rooster-skull-raglan-baseball-3-4-sleeve-tee' or product.handle == 'rooster-skull-black-tee-shirt' or product.handle == 'black-zip-hoodie' or product.handle == 'black-pull-over-hoodie' or product.handle == 'grey-work-shirt' or product.handle == 'jersey-muscle-tank' or product.handle == 'big-rooster-t-shirt' %}
+    <!-- <div class="usa-badge">
+  <img src="{{'usa_badge.jpg' | asset_url}}">
+</div> -->
+{% endif %}
+{% assign variant = product.selected_or_first_available_variant %}
+
+<div class="product-bottom-sticky">
+  <div class="product-bottom-title">
+    {% if variant.title == 'Default Title' %}
+    	{{product.title}}
+    {% else %}
+    	{{variant.title}}
+    {% endif %}
+  </div>
+
+  <div class="product-bottom-variant"> 
+    {% if product.options.size > 1 %}
+      <div class="select">
+        <select id="product-select-{{ product.id }}{{ product-form }}{{ section.id }}{{ block.id }}" name="{{ product.id }}" data-productid="{{ product.id }}" data-productid="{{product.id}}" class="multi_select">
+          {% for v in product.variants %}
+{% unless v.metafields.secomapp.freegifts %}
+{% unless v.title contains '% off)' %}
+
+            <option {% if v == variant %}selected="selected"{% endif %} value="{{ v.id }}" data-sku="{{ v.sku }}">{{ v.title }}</option>
+
+{% endunless %}
+{% endunless %}
+          {% endfor %}
+        </select>
+      </div>
+    {% elsif product.options.size == 1 and sca_product_variantCount > 1 or product.options.size == 1 and product.options[0] != "Title" %}
+      <div class="select">
+        <label>{{ product.options[0] }}</label>
+        <select id="product-select-{{ product.id }}{{ product-form }}{{ section.id }}{{ block.id }}" name="id" data-productid="{{ product.id }}" data-productid="{{product.id}}">
+          {% for v in product.variants %}
+{% unless v.metafields.secomapp.freegifts %}
+{% unless v.title contains '% off)' %}
+
+            <option {% if v == variant %}selected="selected"{% endif %} value="{{ v.id }}" data-sku="{{ v.sku }}">{{ v.title }}</option>
+
+{% endunless %}
+{% endunless %}
+          {% endfor %}
+        </select>
+      </div>
+    {% else %}
+      <input type="hidden" name="id" data-productid="{{ product.id }}" value="{{ variant.id }}" data-productid="{{product.id}}"/>
+    {% endif %}
+  </div>
+
+  <div class="product-bottom-price">{{variant.price | money}}</div>
+  <div class="product-bottom-btns">
+    <div class="product-bottom-btn"><a href="javascript: void(0)">Add To Cart</a></div>
+    <!-- <div class="product-bottom-cart"><a href="/cart">Cart</a></div> -->
+  </div>
+</div>
+<div class="">
+<div class="clearfix product_form init {% if sca_product_variantCount > 1 or product.options.size > 1 %}product_form_options{% endif %} product_form--swatches"
+      id="product-form-{{ product.id }}"
+      data-product-form
+      data-money-format="{{ shop.money_format }}"
+      data-shop-currency="{{ shop.currency }}"
+      data-select-id="product-select-{{ product.id }}{{ product-form }}{{ section.id }}{{ block.id }}"
+      data-enable-state="{% if template contains 'product' %}true{% else %}false{% endif %}"
+      data-product="{{ product | json | escape }}"
+      {% if settings.limit_quantity or settings.display_inventory_left %}
+        data-variant-inventory='[{%- for v in product.variants -%}
+{% unless v.metafields.secomapp.freegifts %}
+{% unless v.title contains '% off)' %}
+
+{% if forloop.first == false %},{% endif %}
+
+{"id":{{v.id}},"inventory_quantity":{{v.inventory_quantity}},"inventory_management":"{{v.inventory_management}}","inventory_policy":"{{v.inventory_policy}}"}
+{% endunless %}
+{% endunless %}
+{%- endfor -%}]'
+      {% endif %}
+      data-product-id="{{ product.id }}"
+    
+      >
+{% form 'product', product, data-productid: product.id, class: productClasses %}
+  {% if template contains 'collection' %}
+    {% if collection.handle == 'beard-oil-staging' %}
+      <input type="hidden" name="id" class="ib_to_cart_id" value="">
+    {% endif %}
+  {% endif %}
+ 
+  {% if product.options.size > 1 %}
+    <div class="select">
+      <select id="product-select-{{ product.id }}{{ product-form }}{{ section.id }}{{ block.id }}" name="id" data-productid="{{ product.id }}" class="multi_select">
+        {% for v in product.variants %}
+
+
+          <option {% if v == variant %}selected="selected"{% endif %} value="{{ v.id }}" data-sku="{{ v.sku }}">{{ v.title }}</option>
+
+
+        {% endfor %}
+      </select>
+    </div>
+  {% elsif product.options.size == 1 and sca_product_variantCount > 1 or product.options.size == 1 and product.options[0] != "Title" %}
+    <div class="select">
+      <label>{{ product.options[0] }}</label>
+      <select id="product-select-{{ product.id }}{{ product-form }}{{ section.id }}{{ block.id }}" name="id" data-productid="{{ product.id }}">
+        {% for v in product.variants %}
+
+          <option {% if v == variant %}selected="selected"{% endif %} value="{{ v.id }}" data-sku="{{ v.sku }}">{{ v.title }}</option>
+
+
+        {% endfor %}
+      </select>
+    </div>
+  {% else %}
+    <input type="hidden" name="id" data-productid="{{ product.id }}" product-id="{{ product.id }}" value="{{ variant.id }}" />
+  {% endif %}
+  
+
+  <div class="swatch_options">
+    {% if sca_product_variantCount > 1 or product.options[0] != "Title" %}
+      {% for option in product.options %}
+        {% include 'product-swatch' with option %}
+      {% endfor %}
+    {% endif %}
+
+    {% include 'product-pack-option' %}
+  </div>
+ 
+  {% if product.available %}
+  	
+  	{% include 'subscription-product' %}
+  
+    <div class="purchase-details">
+      {% if settings.display_product_quantity %}
+        <div class="purchase-details__quantity product-quantity-box">
+          <label for="quantity">{{ 'products.product.quantity' | t }}</label>
+          <span class="ss-icon product-minus js-change-quantity" data-func="minus"><span class="icon-minus"></span></span>
+          <input type="number" min="1" size="2" class="quantity" name="quantity" id="quantity" value="1" {% if settings.limit_quantity and variant.inventory_management != blank and variant.inventory_policy == "deny" %}max="{{ variant.inventory_quantity }}"{% endif %} />
+          <span class="ss-icon product-plus js-change-quantity" data-func="plus"><span class="icon-plus"></span></span>
+        </div>
+      {% endif %}
+
+        <div class="purchase-details__buttons">
+            {% capture add_to_cart_label %}{% if collection_handles contains 'pre-order' %}{{ 'collections.general.pre_order' | t }}{% else %}{{ 'products.product.add_to_cart' | t }}{% endif %}{% endcapture %}
+            <button type="submit" name="add" onClick="addItemToCart({{ variant.id }}, 1, {{product.selling_plan_groups[0].selling_plans[0].id}})" class="action_button add_to_cart" data-label={{ add_to_cart_label | json }}>
+                <span class="text">{{ add_to_cart_label }} – {{ sca_price | money }}</span>
+            </button>
+        </div>
+    </div>
+  <script type="noscript-s">  
+function addItemToCart(variant_id, qty, selling_plan) {
+
+    data = {
+      "id": variant_id,
+      "quantity": qty,
+      "selling_plan": selling_plan
+    }
+    jQuery.ajax({
+      type: 'POST',
+      url: '/cart/add.js',
+      data: data,
+      dataType: 'json',
+      success: function() { 
+        window.location.href = '/cart'; 
+      }
+    });
+  }
+</script>
+  	{% if additional_checkout_buttons %}
+      <div class="additional-checkout-buttons">{{ content_for_additional_checkout_buttons }}</div>
+    {% endif %}
+  
+  {% else %}
+    <button class="btn-soldout" disabled>Sold Out</button>
+  {% endif %}
+  
+  
+{% endform %}
+</div>
+</div>

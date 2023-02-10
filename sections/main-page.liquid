@@ -1,0 +1,79 @@
+{% if page.url == "/pages/about" %}
+	{% include 'breadcrumb' %}
+{% endif %}
+
+{% include 'hypervisual' %}
+
+{% if page.url == "/pages/reviews" %}
+<div class="custom-container">
+    <div class="title-head row">
+      <div class="custom-wrapper">
+    	<h1 class="reviews__title">From The Brotherhood</h1>
+      </div>
+    </div>
+</div>
+{% endif %}
+
+{% if page.url == "/pages/terms-conditions" %}
+<div class="page">
+  <div class="title-head row">
+  <h1>Terms & Conditions</h1>
+  </div>
+</div>
+{% endif %}
+
+{% if page.url == "/pages/private-policy" %}
+<div class="page">
+  <div class="title-head row">
+  <h1>Privacy Policy</h1>
+  </div>
+</div>
+{% endif %}
+
+
+{% if page.url == "/pages/refund-policy" %}
+<div class="page">
+  <div class="title-head row">
+  <h1>Refund Policy</h1>
+  </div>
+</div>
+{% endif %}
+
+
+
+<section class="page">
+  {% if page.url == "/pages/reviews" %}
+  	<div class="custom-wrapper">{{ page.content }}</div>
+  {% else %}
+  	<div class="content">{{ page.content }}</div>
+  {% endif %}
+  
+</section>
+
+{% if page.url == "/pages/terms-conditions" %}
+
+    <div class="brands_content">
+      <img src="//cdn.shopify.com/s/files/1/2283/7011/t/64/assets/brand1.png?v=4649987262928899609" alt="Brand 1">
+      <img src="//cdn.shopify.com/s/files/1/2283/7011/t/64/assets/brand2.png?v=7090727573988740479" alt="Brand 2">
+      <img src="//cdn.shopify.com/s/files/1/2283/7011/t/64/assets/brand3.png?v=7352511492134905316" alt="Brand 3">
+      <img src="//cdn.shopify.com/s/files/1/2283/7011/t/64/assets/brand4.png?v=10043053564251561318" alt="Brand 4">
+      <img src="//cdn.shopify.com/s/files/1/2283/7011/t/64/assets/brand5.png?v=776575270510417363" alt="Brand 5">
+      <img src="//cdn.shopify.com/s/files/1/2283/7011/t/64/assets/brand6.png?v=13768030117542811054" alt="Brand 6">
+      <img src="//cdn.shopify.com/s/files/1/2283/7011/t/64/assets/brand7.png?v=5169948050810186508" alt="Brand 7">
+    </div>
+{% endif %}
+<style>
+  .row {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+  .title-head.row h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+</style>

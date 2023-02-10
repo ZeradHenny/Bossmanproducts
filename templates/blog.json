@@ -1,0 +1,80 @@
+{
+  "sections": {
+    "main": {
+      "type": "blog-hero",
+      "settings": {
+        "featured_article": "blog\/what-your-beard-style-says-about-you",
+        "background_image": "shopify:\/\/shop_images\/static-blog-hero.jpg",
+        "show_category": true,
+        "show_category_menu": true
+      }
+    },
+    "content": {
+      "type": "blog-category-slider",
+      "blocks": {
+        "9de68c11-2da6-4119-9cb7-d17dac98ce17": {
+          "type": "article",
+          "settings": {
+            "featured_article": "blog\/how-to-shape-your-beard",
+            "thumbnail": "shopify:\/\/shop_images\/static-grooming-thumb.png"
+          }
+        },
+        "a9b094fc-789b-4763-a5eb-940cd6f68655": {
+          "type": "article",
+          "settings": {
+            "featured_article": "blog\/can-you-have-a-beard-for-an-interview",
+            "thumbnail": "shopify:\/\/shop_images\/static-success.png"
+          }
+        },
+        "a62f987e-c52e-4b77-83a2-df55d4809aa0": {
+          "type": "article",
+          "settings": {
+            "featured_article": "blog\/beard-supplies-you-need-while-you-re-traveling",
+            "thumbnail": "shopify:\/\/shop_images\/static-lifestyle.png"
+          }
+        },
+        "857a94e9-bdae-429d-b63c-08184598c06b": {
+          "type": "article",
+          "settings": {
+            "featured_article": "blog\/how-to-keep-your-beard-cool-in-the-summer",
+            "thumbnail": "shopify:\/\/shop_images\/blog-thumb4.jpg"
+          }
+        },
+        "bb4f02e3-e502-4eb7-a964-6a187b35595d": {
+          "type": "article",
+          "settings": {
+            "featured_article": "blog\/beard-conditioner-what-are-the-benefits-and-why-bossmans-is-the-best",
+            "thumbnail": "shopify:\/\/shop_images\/blog-thumb5.jpg"
+          }
+        },
+        "d588ce64-355c-45fc-b3a5-9251a7990dda": {
+          "type": "article",
+          "settings": {
+            "featured_article": "blog\/how-does-exercise-impact-beard-growth",
+            "thumbnail": "shopify:\/\/shop_images\/blog-thumb6.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "9de68c11-2da6-4119-9cb7-d17dac98ce17",
+        "a9b094fc-789b-4763-a5eb-940cd6f68655",
+        "a62f987e-c52e-4b77-83a2-df55d4809aa0",
+        "857a94e9-bdae-429d-b63c-08184598c06b",
+        "bb4f02e3-e502-4eb7-a964-6a187b35595d",
+        "d588ce64-355c-45fc-b3a5-9251a7990dda"
+      ],
+      "settings": {
+        "slider_title": "Highlights"
+      }
+    },
+    "next": {
+      "type": "blog-article-grid-with-nav",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "content",
+    "next"
+  ]
+}

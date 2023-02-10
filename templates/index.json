@@ -1,0 +1,400 @@
+{
+  "sections": {
+    "33c2a102-01c7-48ee-aaca-96b7f7065a68": {
+      "type": "herobanner",
+      "blocks": {
+        "d3497879-5361-4616-b504-741df492789b": {
+          "type": "quality",
+          "settings": {
+            "background_img": "shopify:\/\/shop_images\/big-boss-kit_1b6c9c3b-03fd-41db-8d6c-c9c9d8fd61e7.jpg",
+            "product_img": "shopify:\/\/shop_images\/big-boss-kit_1b6c9c3b-03fd-41db-8d6c-c9c9d8fd61e7.jpg",
+            "sub_heading": "Bossman Grooming Kits",
+            "heading": "All Natural, High Quality Beard Care Products.",
+            "sub_title": "The more you buy the less you pay.",
+            "button_text": "Build Your Own Kit",
+            "button_url": "shopify:\/\/pages\/custom-bundle",
+            "shipping_text": "Free Shipping $35+"
+          }
+        }
+      },
+      "block_order": [
+        "d3497879-5361-4616-b504-741df492789b"
+      ],
+      "settings": {}
+    },
+    "881ef0fc-0212-4d5d-a423-19e7bc482d1e": {
+      "type": "featured-on",
+      "blocks": {
+        "5f23ece0-18b2-4e3f-8179-db48211aa834": {
+          "type": "logo",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/Gear-Hungry-logo-Grey.png"
+          }
+        },
+        "e6aba06f-3999-4a92-931c-2e2263da1cf1": {
+          "type": "logo",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/BuzzFeed-logo-Grey.png"
+          }
+        },
+        "253c2b4d-ff3b-42ce-b836-e36c04b52bcf": {
+          "type": "logo",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/Tm_horizontal-logo-Grey.png"
+          }
+        },
+        "75aadaa5-049e-464b-8f67-fe2c3fa02515": {
+          "type": "logo",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/heavy-logo-Grey.png"
+          }
+        }
+      },
+      "block_order": [
+        "5f23ece0-18b2-4e3f-8179-db48211aa834",
+        "e6aba06f-3999-4a92-931c-2e2263da1cf1",
+        "253c2b4d-ff3b-42ce-b836-e36c04b52bcf",
+        "75aadaa5-049e-464b-8f67-fe2c3fa02515"
+      ],
+      "settings": {
+        "title": "“Everything you need for a perfect beard, in one simple kit.”",
+        "trust_title": "",
+        "reviews_title": "Over 10,000 beards have spoken",
+        "reviews_text": "Read Reviews",
+        "reviews_link": "",
+        "wf_title": "Proudly trusted by Whole Foods.",
+        "wf_logo_img": "shopify:\/\/shop_images\/whole_foods_300x_2c8c1ecf-e662-47bf-ba93-440088d7431f.png"
+      }
+    },
+    "131249a1-b343-455b-be89-dfb045f45318": {
+      "type": "topsellers",
+      "blocks": {
+        "b60aa8fa-47fb-44c1-b3c0-12eb3b4dbb76": {
+          "type": "product",
+          "settings": {
+            "product": "big-boss-beard-care-kit",
+            "index": ""
+          }
+        },
+        "7a59850c-faed-4e4c-8146-4944ec295c7b": {
+          "type": "product",
+          "settings": {
+            "product": "reload-package-kit",
+            "index": ""
+          }
+        },
+        "ed3b25ce-e0ed-431c-b2fc-469ee0ecfa0c": {
+          "type": "product",
+          "settings": {
+            "product": "shower-kit",
+            "index": ""
+          }
+        },
+        "ac83a745-b91f-4a1a-b68d-def9e3cefd4d": {
+          "type": "product",
+          "settings": {
+            "product": "jelly-beard-oil",
+            "index": ""
+          }
+        },
+        "03f9c178-779f-4ec2-8a6f-cd31ec575241": {
+          "type": "product",
+          "settings": {
+            "product": "beard-conditioner",
+            "index": ""
+          }
+        },
+        "8621443f-5b0e-4830-b81e-2743d3651ad0": {
+          "type": "product",
+          "settings": {
+            "product": "colotion-scented-lotion",
+            "index": ""
+          }
+        },
+        "fa886b2b-a770-4fb8-ab23-4a19aeef6565": {
+          "type": "product",
+          "settings": {
+            "product": "exfoliating-beard-body-bar-soap",
+            "index": ""
+          }
+        },
+        "4bcb1209-a606-4e47-ac25-b77c7632596f": {
+          "type": "product",
+          "settings": {
+            "product": "beard-pomade",
+            "index": ""
+          }
+        },
+        "240ba555-4f4a-4523-87b4-f8052d3ba274": {
+          "type": "product",
+          "settings": {
+            "product": "beard-balm",
+            "index": ""
+          }
+        },
+        "fdad38d2-52df-49ca-b592-1b318d77885c": {
+          "type": "product",
+          "settings": {
+            "product": "mustache-wax",
+            "index": ""
+          }
+        }
+      },
+      "block_order": [
+        "b60aa8fa-47fb-44c1-b3c0-12eb3b4dbb76",
+        "7a59850c-faed-4e4c-8146-4944ec295c7b",
+        "ed3b25ce-e0ed-431c-b2fc-469ee0ecfa0c",
+        "ac83a745-b91f-4a1a-b68d-def9e3cefd4d",
+        "03f9c178-779f-4ec2-8a6f-cd31ec575241",
+        "8621443f-5b0e-4830-b81e-2743d3651ad0",
+        "fa886b2b-a770-4fb8-ab23-4a19aeef6565",
+        "4bcb1209-a606-4e47-ac25-b77c7632596f",
+        "240ba555-4f4a-4523-87b4-f8052d3ba274",
+        "fdad38d2-52df-49ca-b592-1b318d77885c"
+      ],
+      "settings": {
+        "title": "Top Sellers"
+      }
+    },
+    "media-grid": {
+      "type": "media-grid",
+      "blocks": {
+        "item-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/FOX8471.jpg",
+            "title": "Beard Care",
+            "subtitle": "Everything you need for your man mane.",
+            "heading_tag": "h3",
+            "link_url": "shopify:\/\/collections\/beard-care",
+            "link_text": "Shop Beard Care",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_column_span": 2,
+            "desktop_row_span": 3,
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "background": "#000000",
+            "background_gradient": "",
+            "text_color": "#ffffff",
+            "text_gradient": "",
+            "button_background": "#bf993f",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "item-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IMG_1065.jpg",
+            "title": "Hair + Body",
+            "subtitle": "Goodbye dandruff and dry skin. Hello best smelling scents.",
+            "heading_tag": "h3",
+            "link_url": "shopify:\/\/collections\/hair-body",
+            "link_text": "Shop Hair + Body",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_column_span": 2,
+            "desktop_row_span": 3,
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "background": "#000000",
+            "background_gradient": "",
+            "text_color": "#ffffff",
+            "text_gradient": "",
+            "button_background": "#bf993f",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "item-1",
+        "item-2"
+      ],
+      "settings": {
+        "full_width": true,
+        "reduce_width": false,
+        "desktop_row_height": 290,
+        "mobile_row_height": 150,
+        "background": "",
+        "background_gradient": ""
+      }
+    },
+    "226df3d0-451b-4af5-90b4-c6054194fafd": {
+      "type": "beardcarepackages",
+      "blocks": {
+        "d1be1288-675f-494c-a7ef-507c0975a518": {
+          "type": "product",
+          "settings": {
+            "product": "big-boss-beard-care-kit",
+            "index": "3"
+          }
+        },
+        "c8647e66-32e9-4138-961f-273ce3a102cf": {
+          "type": "product",
+          "settings": {
+            "product": "complete-facial-hair-care-kit",
+            "index": "5"
+          }
+        },
+        "6b9e7c9a-f7ed-499a-84a1-6cd707835cc7": {
+          "type": "product",
+          "settings": {
+            "product": "beard-essentials-kit",
+            "index": "1"
+          }
+        },
+        "d2835c13-32a7-470f-a61c-4037984110c9": {
+          "type": "product",
+          "settings": {
+            "product": "reload-package-kit",
+            "index": ""
+          }
+        },
+        "b643ab48-cf87-4668-9d2e-b558ed704a96": {
+          "type": "product",
+          "settings": {
+            "product": "professional-kit",
+            "index": ""
+          }
+        },
+        "1a4da092-2730-4c08-ab42-5f0a7807076b": {
+          "type": "product",
+          "settings": {
+            "product": "beard-washing-kit",
+            "index": ""
+          }
+        }
+      },
+      "block_order": [
+        "d1be1288-675f-494c-a7ef-507c0975a518",
+        "c8647e66-32e9-4138-961f-273ce3a102cf",
+        "6b9e7c9a-f7ed-499a-84a1-6cd707835cc7",
+        "d2835c13-32a7-470f-a61c-4037984110c9",
+        "b643ab48-cf87-4668-9d2e-b558ed704a96",
+        "1a4da092-2730-4c08-ab42-5f0a7807076b"
+      ],
+      "settings": {
+        "title": "Grooming Kits"
+      }
+    },
+    "800a10c3-d63c-44e7-8e03-bdb9b6b45d2a": {
+      "type": "from-the-brotherhood",
+      "blocks": {
+        "9302607c-8697-4bf2-b486-f939855a7464": {
+          "type": "richtext",
+          "settings": {
+            "testimonial": "Seriously, this stuff is amazing.",
+            "name": "JMFK",
+            "member_since": "2014",
+            "reviewed_product": "jelly-beard-oil"
+          }
+        },
+        "0e75f4e4-2120-469f-bd02-084ee03024fe": {
+          "type": "richtext",
+          "settings": {
+            "testimonial": "If you're looking for a product to really hydrate your beard in the dry days! Look no further!",
+            "name": "Émile C.",
+            "member_since": "2019",
+            "reviewed_product": "beard-oil"
+          }
+        },
+        "06d13064-5f2c-4acd-bf7e-8189071105c6": {
+          "type": "richtext",
+          "settings": {
+            "testimonial": "Now that my beard has gotten longer this balm works like the name implies, Magic!",
+            "name": "Manny",
+            "member_since": "2018",
+            "reviewed_product": "beard-pomade"
+          }
+        },
+        "0e49f47c-18e2-4313-aca9-05b405a3dbb4": {
+          "type": "richtext",
+          "settings": {
+            "testimonial": "I get this all the time, it's always great.",
+            "name": "Sampson O.",
+            "member_since": "2020",
+            "reviewed_product": "beard-oil"
+          }
+        },
+        "030c4a6b-8a34-4023-b6b6-ccf49260c9c7": {
+          "type": "richtext",
+          "settings": {
+            "testimonial": "I have been enjoying these beard oils they keep my beard soft and smelling good.",
+            "name": "Tiago",
+            "member_since": "2019",
+            "reviewed_product": "beard-pomade"
+          }
+        }
+      },
+      "block_order": [
+        "9302607c-8697-4bf2-b486-f939855a7464",
+        "0e75f4e4-2120-469f-bd02-084ee03024fe",
+        "06d13064-5f2c-4acd-bf7e-8189071105c6",
+        "0e49f47c-18e2-4313-aca9-05b405a3dbb4",
+        "030c4a6b-8a34-4023-b6b6-ccf49260c9c7"
+      ],
+      "settings": {}
+    },
+    "bd3928e8-7fd3-40b8-b772-39e762d3ee5d": {
+      "type": "ourstory",
+      "blocks": {
+        "91ae8128-370d-45f3-9cb0-dd4c07a54350": {
+          "type": "quality",
+          "settings": {
+            "background_img": "shopify:\/\/shop_images\/OurStoryNew.jpg",
+            "sub_title": "",
+            "heading": "Our Story",
+            "button_text": "Read",
+            "button_url": "shopify:\/\/pages\/about-us"
+          }
+        }
+      },
+      "block_order": [
+        "91ae8128-370d-45f3-9cb0-dd4c07a54350"
+      ],
+      "settings": {}
+    },
+    "2ae3a0b3-e1b4-4c4d-8f6a-5a625286790e": {
+      "type": "blog",
+      "blocks": {
+        "47de433b-31ac-409e-a142-c32f0868c653": {
+          "type": "article",
+          "settings": {
+            "featured_article": "blog\/what-is-beard-jelly-why-is-it-amazing",
+            "image": "shopify:\/\/shop_images\/DSC07660-web.jpg"
+          }
+        },
+        "9755239a-998a-496e-ae9c-b072a5355a8c": {
+          "type": "article",
+          "settings": {
+            "featured_article": "blog\/5-beard-mistakes-to-avoid",
+            "image": "shopify:\/\/shop_images\/Bossman-57.jpg"
+          }
+        },
+        "5ee44b43-4432-4c07-b4e6-a6070cf71335": {
+          "type": "article",
+          "settings": {
+            "featured_article": "blog\/the-best-beard-brush-ever-made",
+            "image": "shopify:\/\/shop_images\/brush_web_314a89aa-995d-4ab3-bf9e-237720737a23.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "47de433b-31ac-409e-a142-c32f0868c653",
+        "9755239a-998a-496e-ae9c-b072a5355a8c",
+        "5ee44b43-4432-4c07-b4e6-a6070cf71335"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "33c2a102-01c7-48ee-aaca-96b7f7065a68",
+    "881ef0fc-0212-4d5d-a423-19e7bc482d1e",
+    "131249a1-b343-455b-be89-dfb045f45318",
+    "media-grid",
+    "226df3d0-451b-4af5-90b4-c6054194fafd",
+    "800a10c3-d63c-44e7-8e03-bdb9b6b45d2a",
+    "bd3928e8-7fd3-40b8-b772-39e762d3ee5d",
+    "2ae3a0b3-e1b4-4c4d-8f6a-5a625286790e"
+  ]
+}

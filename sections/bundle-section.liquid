@@ -1,0 +1,162 @@
+{{ 'bundle-section.css' | asset_url | stylesheet_tag }}
+{%- assign collection = collections[section.settings.ctm_collection] -%}
+ 
+
+<div class="ctms-main-features">
+  <h2 class="text-align">{{ section.settings.ctms_heading }}</h2> 
+  
+  <div class="bndl_updated_value ctms-main-features">
+<!--     <p class="discount_info"> Add 4 Product to receive 25% OFF & Add 5 or more to receive 35% OFF </p>  -->
+    <p class="discount_info">  Add 4 or more to receive 35% OFF </p>
+
+    <h2>YOUR BUNDLE:</h2>
+    <span style="font-size:.7em;font-weight:700;">MUST USE CODE: BUNDLE35OFF</span>
+    <div class="ctms-features-items bndl-items"> 
+      {%comment%}<div class="ctms-features-list bndl_product_list">  
+        <div class="bndl_product" data-line-item-key="" data-variant-id="">
+          <a href="#">
+            <img src="https://cdn.shopify.com/s/files/1/2283/7011/products/RoundBrush_3_200x.jpg?v=1613433376" alt="">
+          </a>
+          <div class="bndl_pro_title">
+            <div class="bndl_pro_detail"><span class="qty_val">1x</span><a href="#">Bossman Round Boar & Nylon Bristle Brush</a></div>
+          </div>
+          <div class="bndl_close"></div>
+        </div>
+      </div>{%endcomment%}
+    </div>
+  </div>
+
+  <div class="bundle_subtotal_price bndl-hidden">
+    <h2>Bundle Price</h2>
+    <h2 class="heading-hover">(35% Discount)</h2>
+    <h2 data-proprice="0" class="mian_price"><del></del></h2>
+    <h2 class="discounted_price"></h2>
+  </div>
+  
+  <div class="bundle_notice">
+    <span class="bndl_item_msg">Your bundle needs <span class="bndl_qty_update">4</span> more item(s).</span>
+    <div class="add_bndl_pro_add add_bndl_pro bndl-hidden">CHECKOUT</div>
+  </div>
+  
+  <div class="ctms-features-items">    
+    {% for block in section.blocks %}
+         {%- assign collection = collections[block.settings.bossband_collection] -%}
+          {% if block.settings.bossband_collection_heading %} 
+            <h2>{{block.settings.bossband_collection_heading}}</h2> 
+          {% endif %}
+    
+    {% for product in collection.products %}
+
+    {% assign sca_product = product %}{% assign sca_product_id_text = "," | append : sca_product.id | append : "," %}{% assign sca_price = sca_product.price %}{% assign sca_price_min = sca_product.price_min %}{% assign sca_price_max = sca_product.price_max %}{% assign sca_compare_at_price = sca_product.compare_at_price %}{% assign sca_compare_at_price_min = sca_product.compare_at_price_min %}{% assign sca_compare_at_price_max = sca_product.compare_at_price_max %}{% assign sca_product_available = sca_product.available %}{% assign sca_product_variantCount = sca_product.variants.size %}{% assign sca_compare_at_price_varies = sca_product.compare_at_price_varies %}{% assign sca_price_varies = sca_product.price_varies %}{% assign sca_has_only_default_variant = false %}{% capture sca_product_variants_json %}{{sca_product.variants | json }}{% endcapture %} {% capture sca_product_json %}{ {% if sca_all_gift_products_ids == null or sca_all_gift_products_ids contains sca_product_id_text %}{% assign sca_product_available = false %}{% assign sca_product_variantCount = 0 %}{% assign sca_has_only_default_variant = true %}{% assign sca_is_first_variant = true %}{% capture sca_variants_json %} [{% for variant in sca_product.variants %}{% unless variant.metafields.secomapp.freegifts %}{% unless variant.title contains '(Freegifts)' %}{% unless variant.title contains '% Off' %}{% unless variant.metafields.shappify_qb.qb_hide == "1" %}{% unless variant.metafields.shappify_bundle.is_bundle == "true" %}{% unless variant.metafields.brodev_scn.hide == "true" %}{% unless variant.metafields.wholesaler2.wholesale %}{% unless variant.metafields.Wholesaler.level %}{% unless variant.title contains '(Wholesale' %}{% if sca_is_first_variant%} {{ variant | json }}{% assign sca_price = variant.price %} {% assign sca_price_min = variant.price %} {% assign sca_price_max = variant.price %} {% assign sca_compare_at_price = variant.compare_at_price %} {% assign sca_compare_at_price_min = variant.compare_at_price %} {% assign sca_compare_at_price_max = variant.compare_at_price %} {% assign sca_product_available = variant.available %} {% assign sca_product_variantCount = 1 %} {% assign sca_is_first_variant = false%}{% else %},{{variant | json }} {% if sca_price_min >= variant.price %} {% assign sca_price_min = variant.price %} {% assign sca_price = variant.price %}{% endif %} {% if sca_price_max <= variant.price %} {% assign sca_price_max = variant.price %} {% endif %} {% if variant.compare_at_price %} {% if sca_compare_at_price_min==null or sca_compare_at_price_min >= variant.compare_at_price %} {% assign sca_compare_at_price_min = variant.compare_at_price %} {% assign sca_compare_at_price = variant.compare_at_price %} {% endif %} {% if sca_compare_at_price_max==null or sca_compare_at_price_max < variant.compare_at_price %} {% assign sca_compare_at_price_max = variant.compare_at_price %} {% endif %} {% endif %} {% if variant.available == true %} {% assign sca_product_available = true %} {% endif %} {% assign sca_product_variantCount = sca_product_variantCount | plus: 1 %}{% endif %}{% endunless %}{% endunless %}{% endunless %}{% endunless %}{% endunless %}{% endunless %}{% endunless %}{% endunless %}{% endunless %}{%endfor%} ]{% endcapture %}{% if sca_price_min < sca_price_max %}{% assign sca_price_varies = true %}{% else %}{% assign sca_price_varies = false %}{% endif %}{% if sca_compare_at_price_min < sca_compare_at_price_max %}{% assign sca_compare_at_price_varies = true %}{% else %}{% assign sca_compare_at_price_varies = false %}{% endif %}{% if sca_product_variantCount > 1 %}{% assign sca_has_only_default_variant = false %}{% endif %}{% if sca_product_variantCount == sca_product.variants.size %} "variants":{{ sca_product.variants }},{% else %}{%assign sca_product_variants_json = sca_variants_json %} "variants":{{ sca_variants_json }},{% endif %}{% else %} "variants":{{ sca_product_variants_json }},{% endif %} "id": {{sca_product.id}}, "title": {{sca_product.title | json}}, "handle": {{sca_product.handle | json}}, "description": {{sca_product.description | json}}, "published_at": "{{sca_product.published_at | date: "%Y-%m-%dT%H-%M-%S%:z" }}", "created_at": "{{sca_product.created_at | date: "%Y-%m-%dT%H-%M-%S%:z" }}", "vendor": {{sca_product.vendor | json}}, "type": {{sca_product.type | json}}, "tags": {{sca_product.tags | json}}, "price": {{sca_price}}, "price_min": {{sca_price_min}}, "price_max": {{sca_price_max}}, "available": {{sca_product.available}}, "price_varies": {{sca_price_varies}}, "compare_at_price": {{sca_compare_at_price}}, "compare_at_price_min": {{sca_compare_at_price_min}}, "compare_at_price_max": {{sca_compare_at_price_max}}, "compare_at_price_varies": {{sca_compare_at_price_varies}}, "images": {{sca_product.images | json}}, "featured_image": {{sca_product.featured_image | json }}, "options": {{sca_product.options | json}}, "media": {{sca_product.media | json }}, "content": {{sca_product.content | json }}} {% endcapture sca_product_json %}
+    
+      {%if product.available %}
+        <div class="ctms-features-list itg_product product_form product-block">  
+          <input type="hidden" class="qty" value="0">
+          <input type="hidden" class="productID" value="{{product.variants.first.id}}"> 
+          <a href="{{ product.url }}">     
+            <img class="proImg" src="{{ product.featured_image | img_url: '200x' }}"> 
+            <h4 class="ctms-content">
+              <span> {{ product.title }}</span>
+            </h4>
+          </a>  
+          <div class="price">
+            {% if on_sale %}
+            <span class="new current_price">{{ sca_price | money }}</span>
+            <span class="sale old was_price">{{ sca_compare_at_price | money }}</span>
+            {% else %}
+            <span class="new current_price">{{ sca_price | money }}</span>
+            {% endif %}
+          </div>
+          <select name="id" style="display:none;" class="productId proId_{{product.id}}" id="data{{forloop.index}}">             
+            {% for variant in product.variants %}
+{% unless variant.metafields.secomapp.freegifts %}
+{% unless variant.title contains '% off)' %}
+
+            {% if variant.available %}             
+            <option data-price="{{variant.price | money}}" data-image="{{variant.image | img_url:'master' }}" data-qty="0" data-vartitle="{{ variant.title }}" data-varquantity="{{variant.inventory_quantity}}" {% if forloop.first == true %}selected{%endif%} data-size="{{ variant.option1 }}" data-color="{{ variant.option2 }}" value="{{ variant.id }}"  >{{ variant.title }}</option>             
+            {%else%}
+            <option data-price="{{variant.price | money}}" data-image="{{variant.image | img_url:'master' }}" data-qty="0" data-varquantity="{{variant.inventory_quantity}}" {% if forloop.first == true %}selected{%endif%} data-size="{{ variant.option1 }}" data-color="{{ variant.option2 }}" value="{{ variant.id }}"  >{{ variant.title }}</option>             
+            {% endif %}
+
+{% endunless %}
+{% endunless %}
+            {% endfor %}             
+          </select>
+    	
+          <div class="colors-option-block">
+            <div id="{{product.id}}" class="swatch_options" {% if sca_product_variantCount > 1 or product.options[0] != "Title" %}{%else%}style="display:none"{%endif%}>
+              {% for option in product.options %}
+              {% include 'bundle-swatch' with option %}
+              {% endfor %}
+            </div> 
+          </div>
+          
+          <div class="feature-price add_product"  data-handle="{{product.handle}}"  data-price="{{ sca_price | money_without_currency }}" data-quantity="0">
+            <div class="btn"><span>ADD</span></div>
+          </div>  
+        </div>   
+      {% endif %}   
+    {% endfor %}   
+    <div class="blockSpace"></div>
+    {% endfor %}    
+  </div>
+</div>
+
+<div id="bndl_footer_status">
+  <div class="bndl_footer_status_container">
+    {%comment%}<div class="bndl-footer-status-product">
+    <a href="" class="bndl-footer-status-product-url" target="_blank">
+      <img title="" class="bndl-footer-status-product-image" src="//cdn.shopify.com/s/files/1/0015/5697/1635/products/190703_BD-OILMINI-002a-WIDE_500X500.jpg?v=1568802118" srcset="//cdn.shopify.com/s/files/1/0015/5697/1635/products/190703_BD-OILMINI-002a-WIDE_318X954.jpg?v=1568802118 318w">
+    </a>
+    </div>{%endcomment%}
+  </div>
+  <div class="bundle_footer ">
+    <span class="bndl_item_msg">Your bundle needs <span class="bndl_qty_update">4</span> more item(s).</span>
+    <div class="add_bndl_pro bndl-hidden price_onFooter add_bndl_pro_add">  
+      <div class="total_price">Total</div>
+
+      <div class="a onHover ">
+        <h2 class="heading-hover">(35% DISCOUNT)</h2>
+<!--          <p class="offer_text" style=""> Add one more to unlock 35% </p> -->
+        <h2 data-proprice="0" class="mian_price"><del>0</del></h2>
+        <h2 class="discounted_price">0</h2>
+      </div>
+      
+      
+    </div>
+  </div>
+</div>
+
+<div class="package-loader_main bndl-hidden">
+  <div class="package-loader-overlay"></div>
+  <div class="package-loader">
+    <img src="//cdn.shopify.com/s/files/1/0076/6895/7299/t/5/assets/loader-image_300x.gif?v=12699920947391466390" alt="loader">
+  </div> 
+</div>
+
+
+{% schema %}
+{
+  "name": "Feature collection",
+	   "max_blocks": 3,
+  "settings": [],
+  "blocks": [
+     {
+       "name": "Collection",
+       "type": "bundle",
+       "settings": [
+          {
+              "type":"text",
+              "id":"bossband_collection_heading",
+              "label":"Collection Heading"
+          },
+          {
+              "type":"collection",
+              "id":"bossband_collection",
+              "label":"Select Collection"
+          }
+       ]
+     }
+   ]
+}
+{% endschema %}

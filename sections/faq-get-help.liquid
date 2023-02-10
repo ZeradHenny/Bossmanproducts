@@ -1,0 +1,79 @@
+<div class="custom-container">
+    <div class="custom-wrapper get-help-wrap">
+        <a href="{{ section.settings.button_url }}" class="c-btn">{{ section.settings.button_text }}</a>
+    </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Bottom",                     
+    "settings": [
+
+	  {
+		"id": "button_text",
+		"type": "text",
+		"label": "Button Text",
+		"default": "Get Help"
+	  },
+	  {
+		"id": "button_url",
+		"type": "url",
+		"label": "Button Url"
+      }
+
+	]
+  }
+{% endschema %}
+
+<style type="text/css">
+  .get-help-wrap {
+    margin: 100px auto;
+    text-align: center;
+  }
+  .get-help-wrap .c-btn {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    width: 238px;
+	height: 52px;
+    line-height: 2.5;
+  }
+  .get-help-wrap .c-btn {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    width: 238px;
+    height: 52px;
+    line-height: 2.5;
+}
+.c-btn, input.c-btn {
+    display: inline-block;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: proxima-nova,sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.46px;
+    width: 219px;
+    height: 36px;
+    padding: 8px 0;
+    background: #bf954a;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    outline: none;
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    text-decoration: none;
+}
+  @media (max-width: 576px) {
+    .get-help-wrap {
+    	margin: 50px auto;
+  	}
+  }
+  
+</style>
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,185 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "vendor",
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h2"
+          }
+        },
+        "badges": {
+          "type": "badges",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_taxes_notice": false
+          }
+        },
+        "rating": {
+          "type": "rating",
+          "settings": {
+            "show_empty": false
+          }
+        },
+        "payment_terms": {
+          "type": "payment_terms",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": false,
+            "stack_blocks": true,
+            "selector_mode": "block",
+            "color_mode": "color",
+            "size_chart_page": ""
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": true,
+            "atc_button_background": "#bf993f",
+            "atc_button_text_color": "",
+            "payment_button_background": "#ffb74a",
+            "payment_button_text_color": ""
+          }
+        },
+        "separator": {
+          "type": "separator",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "collapse_content": true
+          }
+        },
+        "cf8b1774-913c-4356-80f3-587c594be0be": {
+          "type": "collapsible_text",
+          "disabled": true,
+          "settings": {
+            "title": "Title",
+            "content": "<p>Share some content to your customers about your products.<\/p>"
+          }
+        },
+        "00615872-a161-4a24-b767-4026873a3183": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "{% if product.metafields.accentuate.product_guarantee %}\n\t\t\t\t<details class=\"product-info__accordion accordion  group\" aria-expanded=\"false\" is=\"accordion-disclosure\" data-shopify-editor-block=\"{&quot;id&quot;:&quot;description&quot;,&quot;type&quot;:&quot;description&quot;}\">\n\t\t\t\t\t<summary><div class=\"accordion__toggle bold\"><span>Our Guarantee<\/span><span class=\"circle-chevron group-hover:colors group-expanded:colors group-expanded:rotate\"><svg role=\"presentation\" focusable=\"false\" width=\"8\" height=\"6\" class=\"icon icon-chevron-bottom-small\" viewBox=\"0 0 8 6\">\n        <path d=\"m1 1.5 3 3 3-3\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><\/path>\n      <\/svg><\/span>\n    <\/div>\n  <\/summary>\n\t\t\t\t\t<div class=\"accordion__content\">{{ product.metafields.accentuate.product_guarantee }}<\/div>\n\t\t\t\t<\/details>\n\t\t\t\t{% endif %}"
+          }
+        },
+        "2f724f50-282c-45fd-b625-76fb0773f93c": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "{% if product.metafields.accentuate.scent_tab_repeater_title %}\n\t\t\t\t<details class=\"product-info__accordion accordion  group\" aria-expanded=\"false\" is=\"accordion-disclosure\" data-shopify-editor-block=\"{&quot;id&quot;:&quot;description&quot;,&quot;type&quot;:&quot;description&quot;}\">\n\t\t\t\t\t<summary><div class=\"accordion__toggle bold\"><span>Scents<\/span><span class=\"circle-chevron group-hover:colors group-expanded:colors group-expanded:rotate\"><svg role=\"presentation\" focusable=\"false\" width=\"8\" height=\"6\" class=\"icon icon-chevron-bottom-small\" viewBox=\"0 0 8 6\">\n        <path d=\"m1 1.5 3 3 3-3\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><\/path>\n      <\/svg><\/span>\n    <\/div>\n  <\/summary>\n\t\t\t\t\t<div class=\"accordion__content\"><div class=\"textholder\">\n\t\t\t\t\t\t\t  <ul class=\"colors-list\">\n\t\t\t\t\t\t\t\t  \n\t\t\t\t\t\t\t\t{% for value in product.metafields.accentuate.scent_tab_repeater_title %} \n\t\t\t\t\t\t\t\t<li class=\"{{ value }} {% if forloop.index0 == 0%}active{% endif %}\" data-value=\"{{ value }}\">\n\t\t\t\t\t\t\t\t\t{{ value }}\n\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t<\/li> \n\t\t\t\t\t\t\t\t{% endfor %}\n\t\t\t\t\t\t\t  <\/ul>\n\t\t\t\t\t\t\t  {% for value in product.metafields.accentuate.scent_tab_repeater_title %} \n\t\t\t\t\t\t\t\t<div class=\"scent-tab-item-content  {% if forloop.first == true %} active{% endif %}\" data-value=\"{{value}}\">\n\t\t\t\t\t\t\t\t  <p>{{ product.metafields.accentuate.scent_tab_repeater_content[forloop.index0] }}<\/p>\n\t\t\t\t\t\t\t\t<\/div>\n\t\t\t\t\t\t\t  {% endfor %}\n\t\t\t\t\t\t\t \n\t\t\t\t\t\n\t\t\t\t\t\t\t<\/div>\n\t\t\t\t\t\t\t<div class=\"img-holder lazyload\" data-bg=\"{{product.metafields.accentuate.scent_tab_image}}\" style=\"background-image:url({{product.metafields.accentuate.scent_tab_image}});\">\n\t\t\t\t\t\t\t<\/div><\/div>\n\t\t\t\t<\/details>\n\t\t\t\t{% endif %}"
+          }
+        },
+        "b336b89d-0a5a-4a7f-a00f-a629087e10d3": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "{% if product.metafields.accentuate.show_information_module %}\n\t\t\t\t<details class=\"product-info__accordion accordion  group\" aria-expanded=\"false\" is=\"accordion-disclosure\" data-shopify-editor-block=\"{&quot;id&quot;:&quot;description&quot;,&quot;type&quot;:&quot;description&quot;}\">\n\t\t\t\t\t<summary><div class=\"accordion__toggle bold\"><span>Frequently Bought Together<\/span><span class=\"circle-chevron group-hover:colors group-expanded:colors group-expanded:rotate\"><svg role=\"presentation\" focusable=\"false\" width=\"8\" height=\"6\" class=\"icon icon-chevron-bottom-small\" viewBox=\"0 0 8 6\">\n        <path d=\"m1 1.5 3 3 3-3\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><\/path>\n      <\/svg><\/span>\n    <\/div>\n  <\/summary>\n\t\t\t\t\t<div class=\"accordion__content\"><div id=\"w3-product-accessories\" data-product-handle=\"{{ product.handle }}\">\n\t\t                    <div id=\"w3-money-format\" style=\"display:none;\">{{ shop.money_format }}<\/div>\n\t\t                <\/div><\/div>\n\t\t\t\t<\/details>\n\t\t\t\t{% endif %}\n<a class=\"btn-fbt-add\" href=\"javascript: void(0)\">Add Items To Cart<\/a>"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "badges",
+        "price",
+        "rating",
+        "payment_terms",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "separator",
+        "description",
+        "cf8b1774-913c-4356-80f3-587c594be0be",
+        "00615872-a161-4a24-b767-4026873a3183",
+        "2f724f50-282c-45fd-b625-76fb0773f93c",
+        "b336b89d-0a5a-4a7f-a00f-a629087e10d3"
+      ],
+      "settings": {
+        "full_width": true,
+        "show_fixed_add_to_cart": true,
+        "desktop_media_width": 55,
+        "desktop_media_layout": "carousel_thumbnails_left",
+        "mobile_media_size": "expanded",
+        "mobile_carousel_control": "floating_dots",
+        "enable_video_autoplay": false,
+        "enable_video_looping": true,
+        "enable_image_zoom": true,
+        "max_image_zoom_level": 3,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "input_background": "rgba(0,0,0,0)",
+        "input_text_color": ""
+      }
+    },
+    "f454d3b9-36f8-489f-86cd-c837d4bdd5c5": {
+      "type": "product-video-carousel",
+      "disabled": true,
+      "settings": {}
+    },
+    "fbf8a469-4662-4faa-a072-563e35e5dd8a": {
+      "type": "product-testimonial",
+      "settings": {}
+    },
+    "8532e596-ba58-44f3-81d6-5b8a9a5e4024": {
+      "type": "product-testimonial-video",
+      "settings": {}
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "recommendations_count": 4,
+        "products": [],
+        "full_width": false,
+        "stack_products": false,
+        "show_progress_bar": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "subheading": "",
+        "title": "You may also like",
+        "content": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
+      }
+    },
+    "55218071-1178-43fe-8244-d68dc7d9ab8e": {
+      "type": "product-okendo-review",
+      "settings": {}
+    },
+    "78e2c4ec-2432-4828-b24d-2744b327bd1d": {
+      "type": "product-faqs",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "f454d3b9-36f8-489f-86cd-c837d4bdd5c5",
+    "fbf8a469-4662-4faa-a072-563e35e5dd8a",
+    "8532e596-ba58-44f3-81d6-5b8a9a5e4024",
+    "product-recommendations",
+    "55218071-1178-43fe-8244-d68dc7d9ab8e",
+    "78e2c4ec-2432-4828-b24d-2744b327bd1d"
+  ]
+}

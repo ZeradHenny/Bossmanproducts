@@ -1,0 +1,1350 @@
+{
+  "current": {
+    "section_vertical_spacing": "medium",
+    "button_border_radius": 0,
+    "input_border_radius": 8,
+    "block_border_radius": 24,
+    "block_shadow_opacity": 10,
+    "block_shadow_vertical_offset": 18,
+    "background": "#ffffff",
+    "text_color": "#1a1a1a",
+    "header_background": "#000000",
+    "header_text_color": "#ffffff",
+    "footer_background": "#1a1a1a",
+    "footer_text_color": "#ffffff",
+    "primary_button_background": "#bf993f",
+    "primary_button_text_color": "#ffffff",
+    "secondary_button_background": "#f0c417",
+    "secondary_button_text_color": "#ffffff",
+    "product_card_text_color": "#1a1a1a",
+    "product_primary_badge_background": "#803cee",
+    "heading_font": "raleway_n4",
+    "heading_font_size": "large",
+    "heading_letter_spacing": -2,
+    "text_font": "raleway_n4",
+    "show_page_transition": true,
+    "heading_apparition": "split_fade",
+    "show_product_rating": true,
+    "product_color_display": "swatch",
+    "product_info_alignment": "start",
+    "cart_type": "popover",
+    "cart_show_free_shipping_threshold": true,
+    "cart_free_shipping_threshold": 45,
+    "checkout_accent_color": "#f0c417",
+    "checkout_button_color": "#1a1a1a",
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "blocks": {
+          "message": {
+            "type": "message",
+            "settings": {
+              "text": "📦 Free Shipping Over $45",
+              "url": ""
+            }
+          }
+        },
+        "block_order": [
+          "message"
+        ],
+        "settings": {
+          "enable_sticky": false,
+          "text_size": "text-base",
+          "navigation_mode": "arrows",
+          "scrolling_speed": 10,
+          "background": "#c0964a",
+          "background_gradient": "",
+          "text_color": "#ffffff"
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "enable_sticky": false,
+          "hide_on_scroll": false,
+          "logo": "shopify:\/\/shop_images\/MASTERBossmanLogos.png",
+          "logo_max_width": 220,
+          "logo_mobile_max_width": 170,
+          "menu": "main-menu",
+          "sidebar_menu": "",
+          "secondary_menu": "",
+          "menu_open_trigger": "click",
+          "opening_from": "bottom",
+          "layout": "logo_left_navigation_center",
+          "show_social_media": true,
+          "menu_promo_image": "shopify:\/\/shop_images\/big-boss-kit_1b6c9c3b-03fd-41db-8d6c-c9c9d8fd61e7.jpg",
+          "menu_promo_image_url": "shopify:\/\/pages\/custom-bundle",
+          "show_locale_selector": false,
+          "show_country_selector": false,
+          "show_country_flag": false,
+          "show_country_name": false,
+          "transparent_header_text_color": "#ffffff",
+          "reduce_padding": false,
+          "background_opacity": 100,
+          "background_blur_radius": 0
+        }
+      },
+      "cart-drawer": {
+        "type": "cart-drawer",
+        "settings": {
+          "show_cart_note": true,
+          "show_shipping_text": true,
+          "show_checkout_button": true,
+          "recommendations_title": "Trending this month",
+          "products": [],
+          "product_card_background": "#ffffff",
+          "product_card_text_color": ""
+        }
+      },
+      "search-drawer": {
+        "type": "search-drawer",
+        "settings": {
+          "full_width": true,
+          "show_article_category": true,
+          "search_products": true,
+          "search_blog_posts": true,
+          "search_pages": true,
+          "search_collections": true,
+          "search_unavailable_products": "last",
+          "search_menu": "",
+          "search_menu_show_title": true
+        }
+      },
+      "static-text-with-icons": {
+        "type": "static-text-with-icons",
+        "blocks": {
+          "free-shipping": {
+            "type": "item",
+            "disabled": true,
+            "settings": {
+              "icon": "picto-box",
+              "mobile_icon_width": 24,
+              "icon_width": 24,
+              "icon_background_type": "none",
+              "icon_background": "",
+              "icon_color": "",
+              "title": "Free shipping",
+              "content": "<p>Tell your customers about your shipping offer.<\/p>"
+            }
+          },
+          "customer-support": {
+            "type": "item",
+            "disabled": true,
+            "settings": {
+              "icon": "picto-customer-support",
+              "mobile_icon_width": 24,
+              "icon_width": 24,
+              "icon_background_type": "none",
+              "icon_background": "",
+              "icon_color": "",
+              "title": "Customer service",
+              "content": "<p>Tell your customers how they can reach you.<\/p>"
+            }
+          },
+          "discount": {
+            "type": "item",
+            "disabled": true,
+            "settings": {
+              "icon": "picto-coupon",
+              "mobile_icon_width": 24,
+              "icon_width": 24,
+              "icon_background_type": "none",
+              "icon_background": "",
+              "icon_color": "",
+              "title": "Refer a friend",
+              "content": "<p>Tell your customers about your promotional offers.<\/p>"
+            }
+          },
+          "payment": {
+            "type": "item",
+            "disabled": true,
+            "settings": {
+              "icon": "picto-lock",
+              "mobile_icon_width": 24,
+              "icon_width": 24,
+              "icon_background_type": "none",
+              "icon_background": "",
+              "icon_color": "",
+              "title": "Secure payment",
+              "content": "<p>Tel your customers about your payment methods.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "free-shipping",
+          "customer-support",
+          "discount",
+          "payment"
+        ],
+        "settings": {
+          "show_section": false,
+          "full_width": true,
+          "heading_tag": "h6",
+          "text_alignment": "center",
+          "icon_spacing": "small",
+          "background": "",
+          "background_gradient": "",
+          "text_color": ""
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "newsletter": {
+            "type": "newsletter",
+            "settings": {
+              "image": "{{shop.brand.logo}}",
+              "image_width": 150,
+              "heading_size": "h3",
+              "title": "Sign up for new stories and personal offers",
+              "content": ""
+            }
+          },
+          "links": {
+            "type": "links",
+            "settings": {
+              "menu": "footer",
+              "show_menu_title": true
+            }
+          },
+          "text": {
+            "type": "text",
+            "settings": {
+              "title": "About",
+              "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme editor.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "newsletter",
+          "links",
+          "text"
+        ],
+        "settings": {
+          "show_social_media": true,
+          "show_payment_icons": true,
+          "show_country_selector": true,
+          "show_country_flag": true,
+          "show_country_name": true,
+          "show_locale_selector": true,
+          "show_privacy_bar": true,
+          "privacy_bar_title": "Cookie policy",
+          "privacy_bar_content": "<p>We use cookies and similar technologies to provide the best experience on our website. Refer to our Privacy Policy for more information.<\/p>"
+        }
+      },
+      "newsletter-popup": {
+        "type": "newsletter-popup",
+        "settings": {
+          "enable": false,
+          "apparition_delay": 5,
+          "show_only_on_index": true,
+          "show_only_for_visitors": true,
+          "show_only_once": true,
+          "title": "Signup for our newsletter",
+          "button_text": "Subscribe",
+          "subtext": "Describe what your customers will receive when subscribing to your newsletter."
+        }
+      },
+      "bundle-section": {
+        "type": "bundle-section",
+        "blocks": {
+          "1722f66f-5909-41d3-a621-929e394303fd": {
+            "type": "bundle",
+            "settings": {
+              "bossband_collection_heading": "Beard Care",
+              "bossband_collection": "bundle-beard-care-2"
+            }
+          },
+          "199578cd-a02b-465b-b254-e33144d88468": {
+            "type": "bundle",
+            "settings": {
+              "bossband_collection_heading": "Hair + Body",
+              "bossband_collection": "hair-body-bundle"
+            }
+          },
+          "b7bb6cd9-efba-49f1-b2d5-1ce388675795": {
+            "type": "bundle",
+            "settings": {
+              "bossband_collection_heading": "Accessories",
+              "bossband_collection": "accessories-bundle"
+            }
+          }
+        },
+        "block_order": [
+          "1722f66f-5909-41d3-a621-929e394303fd",
+          "199578cd-a02b-465b-b254-e33144d88468",
+          "b7bb6cd9-efba-49f1-b2d5-1ce388675795"
+        ],
+        "settings": {}
+      },
+      "footer-new": {
+        "type": "footer-new",
+        "settings": {
+          "footer_form_title": "Sign Up For News, Sales & 10% off your first order"
+        }
+      },
+      "about-header": {
+        "type": "about-header",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/OurStoryNew.jpg",
+          "title": "Our Story"
+        }
+      },
+      "about-content": {
+        "type": "about-content",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/au-content-image_2x_f08886f7-de1a-439a-b504-7080c69dfe02.jpg",
+          "description": "<p class=\"content-text\" id=\"origins\">Our founder, Stephen Condon, is well-known for his competition-worthy beard. During the beginning of his bearded journey, he noticed his thick beard started getting a bit out of whack and unmanageable. After researching and testing many beard brands on his own beard, he realized most beard oils were almost identical and weren’t thick enough to hydrate his beard without dehydrating his wallet. So, Stephen took matters into his own hands and created the world’s frst, Jelly Beard Oil. Jelly <a href=\"https:\/\/bossmanbrand.com\/products\/jelly-beard-oil\">Beard Oil’s<\/a> thicker viscosity was an instant hit among his bearded friends and those he met in the competitive beard circuit. From there, Bossman Brands was born.\n<\/p>\n<p class=\"content-large-text\">With each product we create, our goal is to innovate and, in doing so, take beard care to the next level.<\/p>\n<p class=\"content-heading\" id=\"innovation\">OUR DIFFERENCE<\/p>\n<p class=\"content-sub-heading\">INNOVATION<\/p>\n<p class=\"content-text\"><a href=\"https:\/\/bossmanbrand.com\/collections\/all\">Bossman products<\/a> aren’t your run of the mill cookie-cutter beard products. With each product we create, our goal is to innovate and, in doing so, take beard care to the next level. Our flagship product, jelly beard oil, was specifcally created to be twice as thick standard beard oils to bind to beard hair better and last longer. This helps solve a plethora of problems bearded men face on a daily basis including beard itch and dandruf.<\/p>\n<br>\n<p class=\"content-sub-heading\" id=\"history\">ALL-NATURAL<\/p>\n<p class=\"content-text\">Bossman products are made with all-natural and responsibly sourced ingredients. Each batch is tested by the Bossman to ensure quality for every customer.<\/p>\n<br>\n<p class=\"content-sub-heading\" id=\"thebrand\">CUSTOMER FIRST<\/p>\n<p class=\"content-text\">We always put our customers first, which is why if you <i>ever<\/i> decide you dislike a product, we will refund your money, no questions asked.  We just believe that’s the way business should be done.<\/p>\n<br>\n<p class=\"content-heading\" id=\"purpose\">OUR PURPOSE<\/p>\n<p class=\"content-text\">Bossman has one purpose and it’s to help the Bosses of the world live their best-bearded lives. Our focus will always be on making quality products and pushing the limits of what everyday beard care entails. Our products are designed to help with every stage of the\tbeard journey from pre-growth to competition styling.<\/p>\n<p class=\"content-text text-bold\">No matter what your beard needs are, or what stage your beard is in, we’ve got the products to make it even better.<\/p>"
+        }
+      },
+      "shop-scent-hero": {
+        "type": "shop-scent-hero",
+        "blocks": {
+          "568e4e0d-dc3e-4b6f-86ca-5074a5fd95bb": {
+            "type": "text",
+            "settings": {
+              "nav": "Magic"
+            }
+          },
+          "594a0655-7d8f-47e2-9ae8-df2e915b8b6e": {
+            "type": "text",
+            "settings": {
+              "nav": "Stagecoach"
+            }
+          },
+          "640bea5b-956e-4346-95e5-d2c6a5491b56": {
+            "type": "text",
+            "settings": {
+              "nav": "Gold"
+            }
+          },
+          "6d451b4d-0991-4074-abd8-e0ab76096130": {
+            "type": "text",
+            "settings": {
+              "nav": "Hammer"
+            }
+          },
+          "7874c6c6-b91a-4358-b439-c1c40219a43d": {
+            "type": "text",
+            "settings": {
+              "nav": "Naked"
+            }
+          },
+          "46f5c037-70a7-4183-8210-d24993fe7cdc": {
+            "type": "text",
+            "settings": {
+              "nav": "Royal Oud"
+            }
+          }
+        },
+        "block_order": [
+          "568e4e0d-dc3e-4b6f-86ca-5074a5fd95bb",
+          "594a0655-7d8f-47e2-9ae8-df2e915b8b6e",
+          "640bea5b-956e-4346-95e5-d2c6a5491b56",
+          "6d451b4d-0991-4074-abd8-e0ab76096130",
+          "7874c6c6-b91a-4358-b439-c1c40219a43d",
+          "46f5c037-70a7-4183-8210-d24993fe7cdc"
+        ],
+        "settings": {
+          "image": "shopify:\/\/shop_images\/BossmanTFC_ShopByScent_Banner.png",
+          "title": "Shop by Scent",
+          "content": "Bossman is world-renowned for our face smells. Our face and hair smells are so tight. You’ll feel like a king. Browse below or use our selector to help decide which is right for you."
+        }
+      },
+      "shop-scent-recommendation": {
+        "type": "shop-scent-recommendation",
+        "blocks": {
+          "4c21f3db-f408-4bbd-86b9-bb2aa16d3263": {
+            "type": "scent-block",
+            "settings": {
+              "scent_bg": "shopify:\/\/shop_images\/magic_f4383988-3bce-4b3e-9f82-228a1e1fbb86.jpg",
+              "scent_title": "Magic",
+              "scent_thumb": "Vanilla \/ Sandalwood <br> Bergamot \/ Frankincense \/ Patchouli",
+              "scent_option_1": "Magic",
+              "scent_option_2": "Stagecoach",
+              "scent_option_3": "Gold",
+              "scent_option_4": "Hammer",
+              "scent_option_5": "Naked",
+              "scent_option_6": "Royal Oud",
+              "scent_content": "Warm blend of rich Sandalwood and Vanilla oils highlight bergamot, patchouli and frankincense accents. This original scent is perfect  for close encounters, special occasions, and days when your beard needs to be as smooth as you are.",
+              "button_url": "https:\/\/bossmanproducts.myshopify.com\/collections\/all\/magic",
+              "button_text": "All Magic"
+            }
+          },
+          "95c81392-253d-450b-9b97-1fa4755056f9": {
+            "type": "recommend-block",
+            "settings": {
+              "recommendaton_title": "Magic Recommendations",
+              "scent_tag": "Magic"
+            }
+          },
+          "85908b9c-9cfb-404d-b673-be386a1b425b": {
+            "type": "scent-block",
+            "settings": {
+              "scent_bg": "shopify:\/\/shop_images\/stagecoach_8a954797-53bd-4bd1-947b-bc331ab76ec1.jpg",
+              "scent_title": "Stagecoach",
+              "scent_thumb": "Fine leather \/ Sweet tobacco <br> Aged bourbon",
+              "scent_option_1": "magic",
+              "scent_option_2": "stagecoach",
+              "scent_option_3": "gold",
+              "scent_option_4": "hammer",
+              "scent_option_5": "naked",
+              "scent_option_6": "royal oud",
+              "scent_content": "This Texas-sized blend of rugged leather, sweet tobacco, and aged Bourbon will make your beard look and smell like a gentleman as you belly up to any saloon. Saddle not required.",
+              "button_url": "https:\/\/bossmanproducts.myshopify.com\/collections\/all\/magic",
+              "button_text": "shop stagecoach"
+            }
+          },
+          "acf9d971-894f-4727-997e-110bd62c8ffc": {
+            "type": "recommend-block",
+            "settings": {
+              "recommendaton_title": "Stagecoach Recommendations",
+              "scent_tag": "Stagecoach"
+            }
+          },
+          "13499472-5b54-40c8-aaed-42c4c39b0801": {
+            "type": "scent-block",
+            "settings": {
+              "scent_bg": "shopify:\/\/shop_images\/gold_1301af0b-4b2a-4e72-81f5-246622b38654.jpg",
+              "scent_title": "Gold",
+              "scent_thumb": "Lemon \/ Lavender \/ Bergamot <br> Cedarwood \/ Spruce Vetiver <br> Rosemary \/ Saffron \/ Sandalwood",
+              "scent_option_1": "Magic",
+              "scent_option_2": "stagecoach",
+              "scent_option_3": "gold",
+              "scent_option_4": "hammer",
+              "scent_option_5": "naked",
+              "scent_option_6": "royal oud",
+              "scent_content": "Fresh mix of woods such as Cedar, Spruce, Sandalwood with a hint of Lemon, Bergamot, Lavender, and Saffron Spice gives a clean and invigorating effect. It’s the perfect way to wake up or just feel refreshed throughout your day.",
+              "button_url": "https:\/\/bossmanproducts.myshopify.com\/collections\/all\/gold",
+              "button_text": "shop gold"
+            }
+          },
+          "2d291bcc-7ab9-4bb1-aed4-928f15174730": {
+            "type": "recommend-block",
+            "settings": {
+              "recommendaton_title": "Gold Recommendations",
+              "scent_tag": "Gold"
+            }
+          },
+          "6d94faaf-35ba-45e7-b1fb-fe3b1b88ee82": {
+            "type": "scent-block",
+            "settings": {
+              "scent_bg": "shopify:\/\/shop_images\/hammer_f5ff7b63-8952-4724-91ef-ad48b5ec0ea0.jpg",
+              "scent_title": "Hammer",
+              "scent_thumb": "Lavender \/ Vanilla <br> Geranium \/ Patchouli",
+              "scent_option_1": "magic",
+              "scent_option_2": "stagecoach",
+              "scent_option_3": "gold",
+              "scent_option_4": "hammer",
+              "scent_option_5": "naked",
+              "scent_option_6": "royal oud",
+              "scent_content": "Every man's scent that just doesn't quit. Geranium and lavender are masterfully mixed with vanilla and patchouli to bring you a strong mechanical smell for the do-it-yourself kind of man.",
+              "button_url": "https:\/\/bossmanproducts.myshopify.com\/collections\/all\/hammer",
+              "button_text": "shop hammer"
+            }
+          },
+          "e6e2351e-3e1c-4125-9797-ba0ccfed1d68": {
+            "type": "recommend-block",
+            "settings": {
+              "recommendaton_title": "Hammer Recommendations",
+              "scent_tag": "Hammer"
+            }
+          },
+          "3443a60d-a71f-4f8a-a483-88fa60cdcbed": {
+            "type": "scent-block",
+            "settings": {
+              "scent_bg": "shopify:\/\/shop_images\/naked_6b2d3a23-e8ac-4dc4-9e6c-9834ed875c7c.jpg",
+              "scent_title": "Naked",
+              "scent_thumb": "unScented",
+              "scent_option_1": "magic",
+              "scent_option_2": "stagecoach",
+              "scent_option_3": "gold",
+              "scent_option_4": "hammer",
+              "scent_option_5": "naked",
+              "scent_option_6": "royal oud",
+              "scent_content": "No scent required. For the man who wants to sport his own natural scent or favorite cologne with no other scent competing for attention.",
+              "button_url": "https:\/\/bossmanproducts.myshopify.com\/collections\/all\/naked",
+              "button_text": "shop naked"
+            }
+          },
+          "452debb1-602b-4be7-b02e-8a6a835dd1eb": {
+            "type": "recommend-block",
+            "settings": {
+              "recommendaton_title": "Naked Recommendations",
+              "scent_tag": "Naked"
+            }
+          },
+          "c1a47f86-6913-4181-939a-3608fda945ed": {
+            "type": "scent-block",
+            "settings": {
+              "scent_bg": "shopify:\/\/shop_images\/royal_oud.jpg",
+              "scent_title": "Royal Oud",
+              "scent_thumb": "Cedarwood \/ Bergamot <br> Lemon \/ Clove \/ Pepper",
+              "scent_option_1": "magic",
+              "scent_option_2": "stagecoach",
+              "scent_option_3": "gold",
+              "scent_option_4": "hammer",
+              "scent_option_5": "naked",
+              "scent_option_6": "royal oud",
+              "scent_content": "Designed for a king, Royal Oud’s Cedarwood and Bergamot undertones are complemented with hints of lemon, clove, and pepper oils. This scent is for the Boss who garners attention from all of those around him based on not only his devilishly good looks, but his attitude and accolades as well.",
+              "button_url": "https:\/\/bossmanproducts.myshopify.com\/collections\/all\/royal-oud",
+              "button_text": "shop royal oud"
+            }
+          },
+          "fbd79c21-326b-4622-b400-033339d51d6c": {
+            "type": "recommend-block",
+            "settings": {
+              "recommendaton_title": "Royal Oud Recommendations",
+              "scent_tag": "Royal Oud"
+            }
+          }
+        },
+        "block_order": [
+          "4c21f3db-f408-4bbd-86b9-bb2aa16d3263",
+          "95c81392-253d-450b-9b97-1fa4755056f9",
+          "85908b9c-9cfb-404d-b673-be386a1b425b",
+          "acf9d971-894f-4727-997e-110bd62c8ffc",
+          "13499472-5b54-40c8-aaed-42c4c39b0801",
+          "2d291bcc-7ab9-4bb1-aed4-928f15174730",
+          "6d94faaf-35ba-45e7-b1fb-fe3b1b88ee82",
+          "e6e2351e-3e1c-4125-9797-ba0ccfed1d68",
+          "3443a60d-a71f-4f8a-a483-88fa60cdcbed",
+          "452debb1-602b-4be7-b02e-8a6a835dd1eb",
+          "c1a47f86-6913-4181-939a-3608fda945ed",
+          "fbd79c21-326b-4622-b400-033339d51d6c"
+        ],
+        "settings": {}
+      },
+      "shop-scent-featured": {
+        "type": "shop-scent-featured",
+        "blocks": {
+          "2586c13b-e65f-4db3-8724-76e83f327596": {
+            "type": "product",
+            "settings": {
+              "product_item": "beard-pomade"
+            }
+          },
+          "beb1453f-bd21-452e-8fd6-01f20c5e5fd1": {
+            "type": "product",
+            "settings": {
+              "product_item": "jelly-beard-oil"
+            }
+          },
+          "2199ed02-5978-4fdd-872a-7cd95e75cc78": {
+            "type": "product",
+            "settings": {
+              "product_item": "colotion-scented-lotion"
+            }
+          },
+          "39784c61-db3b-48bf-9f4c-c16774abe711": {
+            "type": "product",
+            "settings": {
+              "product_item": "beard-balm"
+            }
+          },
+          "202173f2-c0cf-4b6e-a91e-b4d79bebf25f": {
+            "type": "product",
+            "settings": {
+              "product_item": "beard-conditioner"
+            }
+          }
+        },
+        "block_order": [
+          "2586c13b-e65f-4db3-8724-76e83f327596",
+          "beb1453f-bd21-452e-8fd6-01f20c5e5fd1",
+          "2199ed02-5978-4fdd-872a-7cd95e75cc78",
+          "39784c61-db3b-48bf-9f4c-c16774abe711",
+          "202173f2-c0cf-4b6e-a91e-b4d79bebf25f"
+        ],
+        "settings": {
+          "title": "You might also like"
+        }
+      },
+      "boss-bucks-hero": {
+        "type": "boss-bucks-hero",
+        "settings": {
+          "hero_bg": "shopify:\/\/shop_images\/boss-bucks-hero.jpg",
+          "hero_title": "You're a boss.\n<br>It's about time you get rewarded for it.",
+          "hero_sub_title": "Earn Boss Bucks for every purchase, referring friends &amp; more.",
+          "hero_btn_link": "\/account",
+          "hero_btn_title": "Get Rewarded"
+        }
+      },
+      "boss-bucks-earn": {
+        "type": "boss-bucks-earn",
+        "blocks": {
+          "b41d8c1d-0eb9-4f2d-91a3-2356dd5e2a79": {
+            "type": "item",
+            "settings": {
+              "item_img": "shopify:\/\/shop_images\/bucks-signup.png",
+              "item_title": "Sign Up",
+              "item_des": "100 Boss Bucks For Signing Up"
+            }
+          },
+          "8bb24886-c2e2-4702-b8d5-a26bc5abaa69": {
+            "type": "item",
+            "settings": {
+              "item_img": "shopify:\/\/shop_images\/bucks-shop.png",
+              "item_title": "Shop",
+              "item_des": "4 Boss Bucks For \nEvery Dollar Spent"
+            }
+          },
+          "1cceb984-79ea-4662-83ac-8bae70c78ea2": {
+            "type": "item",
+            "settings": {
+              "item_img": "shopify:\/\/shop_images\/bucks-share.png",
+              "item_title": "Share",
+              "item_des": "50 Boss Bucks For \nSharing on Facebook"
+            }
+          },
+          "69b59b2d-1407-4621-b2b3-d77431458571": {
+            "type": "item",
+            "settings": {
+              "item_img": "shopify:\/\/shop_images\/bucks-silver-star.png",
+              "item_title": "Silver VIP",
+              "item_des": "500 points = 50% discount and a free Jelly Beard Oil"
+            }
+          },
+          "5c05b9d5-44b0-4173-ad07-3cd88e3c6aed": {
+            "type": "item",
+            "settings": {
+              "item_img": "shopify:\/\/shop_images\/bucks-reviews.png",
+              "item_title": "Reviews",
+              "item_des": "100 Boss Bucks for writing a Review"
+            }
+          },
+          "490f5ca0-c02a-4ec8-b9a6-84d25afcbf4a": {
+            "type": "item",
+            "settings": {
+              "item_img": "shopify:\/\/shop_images\/bucks-facebook.png",
+              "item_title": "Following on FB",
+              "item_des": "50 Boss Bucks For Following"
+            }
+          },
+          "9f1fe1e1-6056-405f-bbf5-f9b8ffd0a9ad": {
+            "type": "item",
+            "settings": {
+              "item_img": "shopify:\/\/shop_images\/bucks-instagram.png",
+              "item_title": "Following on Instagram",
+              "item_des": "50 Boss Bucks For Following"
+            }
+          },
+          "c9fdc86e-9e46-4e11-a8e5-c122a01fc8d9": {
+            "type": "item",
+            "settings": {
+              "item_img": "shopify:\/\/shop_images\/bucks-gift.png",
+              "item_title": "Birthday",
+              "item_des": "300 Boss Bucks For Your Birthday"
+            }
+          },
+          "066f0415-8fe0-4794-ad82-bb76a2aff0e8": {
+            "type": "item",
+            "settings": {
+              "item_img": "shopify:\/\/shop_images\/bucks-medal.png",
+              "item_title": "Gold VIP",
+              "item_des": "1000 points = $30 store credit and Free Naked Beard Pomade"
+            }
+          }
+        },
+        "block_order": [
+          "b41d8c1d-0eb9-4f2d-91a3-2356dd5e2a79",
+          "8bb24886-c2e2-4702-b8d5-a26bc5abaa69",
+          "1cceb984-79ea-4662-83ac-8bae70c78ea2",
+          "69b59b2d-1407-4621-b2b3-d77431458571",
+          "5c05b9d5-44b0-4173-ad07-3cd88e3c6aed",
+          "490f5ca0-c02a-4ec8-b9a6-84d25afcbf4a",
+          "9f1fe1e1-6056-405f-bbf5-f9b8ffd0a9ad",
+          "c9fdc86e-9e46-4e11-a8e5-c122a01fc8d9",
+          "066f0415-8fe0-4794-ad82-bb76a2aff0e8"
+        ],
+        "settings": {
+          "earn_title": "How To Earn"
+        }
+      },
+      "boss-bucks-refer": {
+        "type": "boss-bucks-refer",
+        "settings": {
+          "refer_bg": "shopify:\/\/shop_images\/bucks-refer-bg.jpg",
+          "refer_title": "Refer a Friend",
+          "refer_sub_title": "500 Boss Bucks ($5) for every friend you refer who purchases.",
+          "btn_link": "\/account",
+          "btn_text": "Get Rewarded, BOSS"
+        }
+      },
+      "boss-bucks-cashing": {
+        "type": "boss-bucks-cashing",
+        "blocks": {
+          "dbcaae64-d1c6-46b4-b740-c9b2fa191904": {
+            "type": "item",
+            "settings": {
+              "item_title": "$5 OFF",
+              "item_sub_title": "= 500 Boss Bucks",
+              "item_des": "(minimum purchase of $20)"
+            }
+          },
+          "26e21a62-6d13-40ce-ad52-3b210ff448ad": {
+            "type": "item",
+            "settings": {
+              "item_title": "$10 OFF",
+              "item_sub_title": "= 1000 Boss Bucks",
+              "item_des": "(minimum purchase of $20)"
+            }
+          },
+          "fd65d20b-831d-478f-9b8e-b4b386e79a1a": {
+            "type": "item",
+            "settings": {
+              "item_title": "$20 OFF",
+              "item_sub_title": "= 2000 Boss Bucks",
+              "item_des": "(minimum purchase of $20)"
+            }
+          }
+        },
+        "block_order": [
+          "dbcaae64-d1c6-46b4-b740-c9b2fa191904",
+          "26e21a62-6d13-40ce-ad52-3b210ff448ad",
+          "fd65d20b-831d-478f-9b8e-b4b386e79a1a"
+        ],
+        "settings": {
+          "cashing_title": "Cashing Out",
+          "btn_link": "\/account",
+          "btn_title": "START EARNING REWARDS NOW"
+        }
+      }
+    },
+    "content_for_index": [],
+    "blocks": {
+      "4526402582171286672": {
+        "type": "shopify:\/\/apps\/selly-promotion-pricing\/blocks\/app-embed-block\/351afe80-738d-4417-9b66-e345ff249052",
+        "disabled": false,
+        "settings": {}
+      },
+      "8605505498557855500": {
+        "type": "shopify:\/\/apps\/free-gifts-bogo-buy-x-get-y\/blocks\/app-embed\/0432bba6-720a-4e95-be5a-b868386f7aa6",
+        "disabled": false,
+        "settings": {}
+      },
+      "855628211100114053": {
+        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {}
+      },
+      "733389323033596483": {
+        "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/theme-settings\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+        "disabled": false,
+        "settings": {
+          "show_preview_data": true
+        }
+      }
+    }
+  },
+  "presets": {
+    "Sound": {
+      "section_vertical_spacing": "medium",
+      "button_border_radius": 60,
+      "input_border_radius": 8,
+      "block_border_radius": 24,
+      "block_shadow_opacity": 10,
+      "block_shadow_vertical_offset": 18,
+      "background": "#f0f0f0",
+      "text_color": "#1a1a1a",
+      "header_background": "#f0f0f0",
+      "header_text_color": "#1a1a1a",
+      "footer_background": "#ffffff",
+      "footer_text_color": "#1a1a1a",
+      "primary_button_background": "#1a1a1a",
+      "primary_button_text_color": "#ffffff",
+      "secondary_button_background": "#f0c417",
+      "secondary_button_text_color": "#1a1a1a",
+      "product_card_text_color": "#1a1a1a",
+      "product_primary_badge_background": "#803cee",
+      "heading_font": "din_next_n7",
+      "heading_font_size": "large",
+      "heading_letter_spacing": -2,
+      "text_font": "din_next_n4",
+      "show_page_transition": true,
+      "heading_apparition": "split_fade",
+      "product_color_display": "swatch",
+      "product_info_alignment": "start",
+      "checkout_accent_color": "#f0c417",
+      "checkout_button_color": "#1a1a1a",
+      "sections": {
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "blocks": {
+            "message": {
+              "type": "message",
+              "settings": {
+                "text": "Announce something here"
+              }
+            }
+          },
+          "block_order": [
+            "message"
+          ],
+          "settings": {
+            "enable_sticky": false,
+            "text_size": "text-xs",
+            "navigation_mode": "scrolling",
+            "scrolling_speed": 10,
+            "background": "#1a1a1a",
+            "text_color": "#ffffff"
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "enable_sticky": true,
+            "hide_on_scroll": false,
+            "logo": "{{shop.brand.logo}}",
+            "logo_max_width": 120,
+            "logo_mobile_max_width": 100,
+            "menu": "main-menu",
+            "menu_open_trigger": "click",
+            "opening_from": "bottom",
+            "layout": "logo_left_navigation_center",
+            "show_social_media": true,
+            "show_country_flag": true,
+            "show_country_name": false,
+            "transparent_header_text_color": "#ffffff",
+            "reduce_padding": false,
+            "background_opacity": 100,
+            "background_blur_radius": 0
+          }
+        },
+        "cart-drawer": {
+          "type": "cart-drawer",
+          "settings": {
+            "show_cart_note": true,
+            "show_shipping_text": true,
+            "show_checkout_button": true,
+            "product_card_background": "#ffffff"
+          }
+        },
+        "search-drawer": {
+          "type": "search-drawer",
+          "settings": {
+            "full_width": true,
+            "show_article_category": true,
+            "search_products": true,
+            "search_blog_posts": true,
+            "search_pages": true,
+            "search_collections": true,
+            "search_unavailable_products": "last"
+          }
+        },
+        "static-text-with-icons": {
+          "type": "static-text-with-icons",
+          "blocks": {
+            "free-shipping": {
+              "type": "item",
+              "settings": {
+                "icon": "picto-box",
+                "mobile_icon_width": 24,
+                "icon_width": 24,
+                "icon_background_type": "none",
+                "title": "Free shipping",
+                "content": "<p>Tell your customers about your shipping offer.<\/p>"
+              }
+            },
+            "customer-support": {
+              "type": "item",
+              "settings": {
+                "icon": "picto-customer-support",
+                "mobile_icon_width": 24,
+                "icon_width": 24,
+                "icon_background_type": "none",
+                "title": "Customer service",
+                "content": "<p>Tell your customers how they can reach you.<\/p>"
+              }
+            },
+            "discount": {
+              "type": "item",
+              "settings": {
+                "icon": "picto-coupon",
+                "mobile_icon_width": 24,
+                "icon_width": 24,
+                "icon_background_type": "none",
+                "title": "Refer a friend",
+                "content": "<p>Tell your customers about your promotional offers.<\/p>"
+              }
+            },
+            "payment": {
+              "type": "item",
+              "settings": {
+                "icon": "picto-lock",
+                "mobile_icon_width": 24,
+                "icon_width": 24,
+                "icon_background_type": "none",
+                "title": "Secure payment",
+                "content": "<p>Tel your customers about your payment methods.<\/p>"
+              }
+            }
+          },
+          "block_order": [
+            "free-shipping",
+            "customer-support",
+            "discount",
+            "payment"
+          ],
+          "settings": {
+            "show_section": true,
+            "full_width": true,
+            "heading_tag": "h6",
+            "text_alignment": "center",
+            "icon_spacing": "small"
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "newsletter": {
+              "type": "newsletter",
+              "settings": {
+                "image": "{{shop.brand.logo}}",
+                "image_width": 150,
+                "heading_size": "h3",
+                "title": "Sign up for new stories and personal offers"
+              }
+            },
+            "links": {
+              "type": "links",
+              "settings": {
+                "menu": "footer",
+                "show_menu_title": true
+              }
+            },
+            "text": {
+              "type": "text",
+              "settings": {
+                "title": "About",
+                "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme editor.<\/p>"
+              }
+            }
+          },
+          "block_order": [
+            "newsletter",
+            "links",
+            "text"
+          ],
+          "settings": {
+            "show_social_media": true,
+            "show_payment_icons": true,
+            "show_country_selector": true,
+            "show_country_flag": true,
+            "show_country_name": true,
+            "show_locale_selector": true,
+            "show_privacy_bar": true,
+            "privacy_bar_title": "Cookie policy",
+            "privacy_bar_content": "<p>We use cookies and similar technologies to provide the best experience on our website. Refer to our Privacy Policy for more information.<\/p>"
+          }
+        }
+      }
+    },
+    "Home": {
+      "section_vertical_spacing": "medium",
+      "section_boxed_horizontal_spacing": "large",
+      "button_hover_effect": "reverse",
+      "background": "#ffffff",
+      "text_color": "#272727",
+      "success_color": "#708a5c",
+      "warning_color": "#e37e16",
+      "error_color": "#aa2826",
+      "header_background": "#ffffff",
+      "header_text_color": "#272727",
+      "footer_background": "#f2f2f2",
+      "footer_text_color": "#272727",
+      "primary_button_background": "#272727",
+      "primary_button_text_color": "#ffffff",
+      "secondary_button_background": "#3c619e",
+      "secondary_button_text_color": "#ffffff",
+      "product_card_text_color": "#272727",
+      "product_on_sale_accent": "#e34f4f",
+      "product_sold_out_badge_background": "#bebdb9",
+      "product_primary_badge_background": "#3c619e",
+      "heading_font": "futura_n7",
+      "heading_font_size": "large",
+      "heading_text_transform": "normal",
+      "heading_letter_spacing": -1,
+      "text_font": "futura_n4",
+      "heading_apparition": "split_rotation",
+      "color_swatch_style": "rectangle",
+      "product_color_display": "swatch",
+      "cart_type": "page",
+      "checkout_body_background_color": "#f2f2f2",
+      "checkout_sidebar_background_color": "#ffffff",
+      "checkout_accent_color": "#3c619e",
+      "checkout_button_color": "#3c619e",
+      "sections": {
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "blocks": {
+            "message": {
+              "type": "message",
+              "settings": {
+                "text": "Announce something here"
+              }
+            }
+          },
+          "block_order": [
+            "message"
+          ],
+          "settings": {
+            "enable_sticky": false,
+            "text_size": "text-xs",
+            "navigation_mode": "arrows",
+            "scrolling_speed": 20,
+            "background": "#272727",
+            "text_color": "#ffffff"
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "enable_sticky": true,
+            "hide_on_scroll": false,
+            "logo": "{{shop.brand.logo}}",
+            "logo_max_width": 120,
+            "logo_mobile_max_width": 100,
+            "menu": "main-menu",
+            "menu_open_trigger": "hover",
+            "opening_from": "bottom",
+            "layout": "logo_center_navigation_inline",
+            "show_social_media": true,
+            "show_country_flag": true,
+            "show_country_name": false,
+            "transparent_header_text_color": "#ffffff",
+            "reduce_padding": false,
+            "background_opacity": 100,
+            "background_blur_radius": 0
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "newsletter": {
+              "type": "newsletter",
+              "settings": {
+                "image": "{{shop.brand.logo}}",
+                "image_width": 150,
+                "heading_size": "h3",
+                "title": "Sign up for new stories and personal offers"
+              }
+            },
+            "links": {
+              "type": "links",
+              "settings": {
+                "menu": "footer",
+                "show_menu_title": true
+              }
+            },
+            "text": {
+              "type": "text",
+              "settings": {
+                "title": "About",
+                "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme editor.<\/p>"
+              }
+            }
+          },
+          "block_order": [
+            "newsletter",
+            "links",
+            "text"
+          ],
+          "settings": {
+            "show_social_media": true,
+            "show_payment_icons": true,
+            "show_locale_selector": true,
+            "show_country_selector": true,
+            "show_country_flag": true,
+            "show_country_name": true,
+            "show_privacy_bar": true,
+            "privacy_bar_title": "Cookie policy",
+            "privacy_bar_content": "<p>We use cookies and similar technologies to provide the best experience on our website. Refer to our Privacy Policy for more information.<\/p>"
+          }
+        },
+        "static-text-with-icons": {
+          "type": "static-text-with-icons",
+          "blocks": {
+            "free-shipping": {
+              "type": "item",
+              "settings": {
+                "icon": "picto-box",
+                "mobile_icon_width": 24,
+                "icon_width": 24,
+                "icon_background_type": "none",
+                "title": "Free shipping",
+                "content": "<p>Tell your customers about your shipping offer.<\/p>"
+              }
+            },
+            "customer-support": {
+              "type": "item",
+              "settings": {
+                "icon": "picto-customer-support",
+                "mobile_icon_width": 24,
+                "icon_width": 24,
+                "icon_background_type": "none",
+                "title": "Customer service",
+                "content": "<p>Tell your customers how they can reach you.<\/p>"
+              }
+            },
+            "discount": {
+              "type": "item",
+              "settings": {
+                "icon": "picto-coupon",
+                "mobile_icon_width": 24,
+                "icon_width": 24,
+                "icon_background_type": "none",
+                "title": "Refer a friend",
+                "content": "<p>Tell your customers about your promotional offers.<\/p>"
+              }
+            },
+            "payment": {
+              "type": "item",
+              "settings": {
+                "icon": "picto-lock",
+                "mobile_icon_width": 24,
+                "icon_width": 24,
+                "icon_background_type": "none",
+                "title": "Secure payment",
+                "content": "<p>Tel your customers about your payment methods.<\/p>"
+              }
+            }
+          },
+          "block_order": [
+            "free-shipping",
+            "customer-support",
+            "discount",
+            "payment"
+          ],
+          "settings": {
+            "show_section": true,
+            "full_width": true,
+            "heading_tag": "h6",
+            "text_alignment": "center",
+            "icon_spacing": "small"
+          }
+        },
+        "cart-drawer": {
+          "type": "cart-drawer",
+          "settings": {
+            "show_cart_note": true,
+            "show_shipping_text": true,
+            "show_checkout_button": true,
+            "product_card_background": "#f2f2f2"
+          }
+        },
+        "search-drawer": {
+          "type": "search-drawer",
+          "settings": {
+            "full_width": false,
+            "show_article_category": true,
+            "search_products": true,
+            "search_blog_posts": true,
+            "search_pages": false,
+            "search_collections": true,
+            "search_unavailable_products": "last"
+          }
+        }
+      }
+    },
+    "Shape": {
+      "page_width": 1440,
+      "section_vertical_spacing": "small",
+      "section_boxed_horizontal_spacing": "medium",
+      "button_border_radius": 60,
+      "input_border_radius": 8,
+      "block_border_radius": 20,
+      "icon_stroke_width": 1.5,
+      "button_style": "fill",
+      "button_hover_effect": "reverse",
+      "text_color": "#2a555a",
+      "header_background": "#ffffff",
+      "header_text_color": "#2a555a",
+      "footer_background": "#f7f7f7",
+      "footer_text_color": "#2a555a",
+      "primary_button_background": "#2a555a",
+      "primary_button_text_color": "#ffffff",
+      "secondary_button_background": "#d9967e",
+      "product_card_text_color": "#2a555a",
+      "heading_font": "itc_berkeley_old_style_n4",
+      "heading_font_size": "large",
+      "heading_text_transform": "normal",
+      "heading_letter_spacing": -1,
+      "text_font": "muli_n4",
+      "text_font_size_desktop": 15,
+      "product_color_display": "swatch",
+      "product_info_alignment": "center",
+      "sections": {
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "blocks": {
+            "message": {
+              "type": "message",
+              "settings": {
+                "text": "Announce something here"
+              }
+            }
+          },
+          "block_order": [
+            "message"
+          ],
+          "settings": {
+            "enable_sticky": false,
+            "text_size": "text-xs",
+            "navigation_mode": "scrolling",
+            "scrolling_speed": 12,
+            "background": "#2a555a",
+            "text_color": "#ffffff"
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "enable_sticky": true,
+            "hide_on_scroll": false,
+            "logo": "{{shop.brand.logo}}",
+            "logo_max_width": 120,
+            "logo_mobile_max_width": 100,
+            "menu": "main-menu",
+            "menu_open_trigger": "click",
+            "opening_from": "bottom",
+            "layout": "logo_center_navigation_inline",
+            "show_social_media": true,
+            "show_country_flag": true,
+            "show_country_name": false,
+            "transparent_header_text_color": "#ffffff",
+            "reduce_padding": false,
+            "background_opacity": 20,
+            "background_blur_radius": 20
+          }
+        },
+        "cart-drawer": {
+          "type": "cart-drawer",
+          "settings": {
+            "show_cart_note": true,
+            "show_shipping_text": true,
+            "show_checkout_button": true
+          }
+        },
+        "search-drawer": {
+          "type": "search-drawer",
+          "settings": {
+            "full_width": false,
+            "show_article_category": true,
+            "search_products": true,
+            "search_blog_posts": true,
+            "search_pages": true,
+            "search_collections": true,
+            "search_unavailable_products": "last"
+          }
+        },
+        "static-text-with-icons": {
+          "type": "static-text-with-icons",
+          "blocks": {
+            "free-shipping": {
+              "type": "item",
+              "settings": {
+                "icon": "picto-box",
+                "mobile_icon_width": 24,
+                "icon_width": 24,
+                "icon_background_type": "none",
+                "title": "Free shipping",
+                "content": "<p>Tell your customers about your shipping offer.<\/p>"
+              }
+            },
+            "customer-support": {
+              "type": "item",
+              "settings": {
+                "icon": "picto-customer-support",
+                "mobile_icon_width": 24,
+                "icon_width": 24,
+                "icon_background_type": "none",
+                "title": "Customer service",
+                "content": "<p>Tell your customers how they can reach you.<\/p>"
+              }
+            },
+            "discount": {
+              "type": "item",
+              "settings": {
+                "icon": "picto-coupon",
+                "mobile_icon_width": 24,
+                "icon_width": 24,
+                "icon_background_type": "none",
+                "title": "Refer a friend",
+                "content": "<p>Tell your customers about your promotional offers.<\/p>"
+              }
+            },
+            "payment": {
+              "type": "item",
+              "settings": {
+                "icon": "picto-lock",
+                "mobile_icon_width": 24,
+                "icon_width": 24,
+                "icon_background_type": "none",
+                "title": "Secure payment",
+                "content": "<p>Tel your customers about your payment methods.<\/p>"
+              }
+            }
+          },
+          "block_order": [
+            "free-shipping",
+            "customer-support",
+            "discount",
+            "payment"
+          ],
+          "settings": {
+            "show_section": true,
+            "full_width": true,
+            "heading_tag": "h4",
+            "text_alignment": "center",
+            "icon_spacing": "small"
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "newsletter": {
+              "type": "newsletter",
+              "settings": {
+                "image": "{{shop.brand.logo}}",
+                "image_width": 150,
+                "heading_size": "h3",
+                "title": "Sign up for new stories and personal offers"
+              }
+            },
+            "links": {
+              "type": "links",
+              "settings": {
+                "menu": "footer",
+                "show_menu_title": true
+              }
+            },
+            "text": {
+              "type": "text",
+              "settings": {
+                "title": "About",
+                "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme editor.<\/p>"
+              }
+            }
+          },
+          "block_order": [
+            "newsletter",
+            "links",
+            "text"
+          ],
+          "settings": {
+            "show_social_media": true,
+            "show_payment_icons": true,
+            "show_country_selector": true,
+            "show_country_flag": true,
+            "show_country_name": true,
+            "show_locale_selector": true,
+            "show_privacy_bar": true,
+            "privacy_bar_title": "Cookie policy",
+            "privacy_bar_content": "<p>We use cookies and similar technologies to provide the best experience on our website. Refer to our Privacy Policy for more information.<\/p>"
+          }
+        }
+      }
+    }
+  }
+}

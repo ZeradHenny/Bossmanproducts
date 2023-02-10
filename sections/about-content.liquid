@@ -1,0 +1,141 @@
+
+<div class="custom-container">
+		<!-- main-content starts -->
+		<div class="custom-wrapper about-us-content">
+			<div class="about-us-content__left">
+				<img src="{{ section.settings.image | img_url: '300x'}}" alt="">
+			</div>
+			<div class="about-us-content__right">
+              <div>{{ section.settings.description }}</div>
+			</div>
+		</div>
+</div>
+
+
+
+
+{% schema %}
+  {
+    "name": "Content",                     
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Left Image"
+      },
+      {
+        "type": "html",
+        "id": "description",
+        "label": "Description"
+      }
+	]
+
+	
+  
+  }
+  
+{% endschema %}
+
+<style type="text/css">
+
+.about-us-content {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 100px
+}
+.content-text, .content-text * {
+    color: #0b0d0d;
+    font-family: proxima-nova, sans-serif;
+    font-size: 21px;
+    line-height: 2;
+    font-weight: 500
+}
+
+.content-large-text {
+    color: #0b0d0d;
+    font-family: 'Bely', sans-serif;
+    font-size: 50px;
+    font-weight: 500
+}
+
+.content-heading {
+    color: #0f0f0f;
+    font-family: proxima-nova, sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 1.1px;
+    padding: 10px 0 10px
+}
+
+.content-sub-heading {
+    text-transform: uppercase;
+    color: #0f0f0f;
+    font-family: proxima-nova, sans-serif;
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: 2.85px
+}
+
+.link {
+    color: #0b0d0d;
+    font-family: proxima-nova, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.38px;
+    text-decoration: none
+}
+  
+@media (max-width: 768px) {
+    .about-us-content {
+        display: inline-block
+    }
+}
+
+.about-us-content__left {
+    width: 18%;
+    text-align: center
+}
+
+@media (max-width: 768px) {
+    .about-us-content__left {
+        width: 100%;
+        margin-bottom: 40px
+    }
+}
+
+.about-us-content__left img {
+    width: 182px;
+    height: auto;
+    display: inline-block;
+    margin: 40px auto 0
+}
+
+.about-us-content__right {
+    width: 76%
+}
+
+@media (max-width: 768px) {
+    .about-us-content__right {
+        width: 100%;
+      	text-align: center;
+    }
+  .about-us-content__left img {
+    margin-top: 0;
+  }
+}
+
+
+</style>
+
+
+{% javascript %}
+
+{% endjavascript %}

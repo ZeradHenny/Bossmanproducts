@@ -1,0 +1,42 @@
+{% if product.metafields.accentuate.show_brotherhood_module %}
+
+<div class="product-reviews-area">
+	<h2>{{ product.metafields.accentuate.testimonials_title }}</h2>	
+	<div class="treecolumns pdp-reviews-slider">
+        {% for quote in product.metafields.accentuate.brotherhood_quote %}
+		<div class="column">
+			<blockquote>
+				<div class="top-name">
+				<div class="reviews-stars"></div><span class="name">from {{ product.metafields.accentuate.brotherhood_name[forloop.index0] }}</span>
+				</div>
+				<p>{{ quote }}</p>
+				
+				<footer>
+					
+					<span>{{ product.metafields.accentuate.brotherhood_year[forloop.index0] }}</span>
+				</footer>
+			</blockquote>
+		</div>
+		{% endfor %}
+	</div>
+	<a href="/pages/reviews" class="view">Read All Reviews</a>
+</div>
+{% endif %}
+{% schema %}
+  {
+    "name": "Product Testimonial",
+    "settings": [],
+    "presets": [
+      {
+        "name": "Product Testimonial",
+        "category": "testimonial"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

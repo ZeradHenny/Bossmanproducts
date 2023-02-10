@@ -1,0 +1,77 @@
+<!-- /secion/blog-tagged-template.liquid -->
+{% comment %}
+  Blog template for category (tag) based article list.
+{% endcomment %}
+
+{%- paginate blogs['blog'].articles by 250 -%}
+
+<div class="blog-list">
+    <ul>
+        {% for tag in blog.all_tags %}
+            {% if current_tags contains tag %}
+            <li class="active blog-tag" data-value="{{tag | handle}}">{{ tag | replace: 'Beard', '' | upcase }}</li>
+            {% else %}
+            <li class="blog-tag" data-value="{{tag | handle}}">{{ tag | replace: 'Beard', '' | upcase | link_to_tag: tag }}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+  
+  	<div class="tags-blog-block">
+        {% for tag in blog.all_tags %}
+            {% assign count = 0 %}
+            <div class="tag-blog-item" data-value="{{tag | handle}}">
+                <div class="tag-blog-background">
+                    <div class="tag-blog-option">
+
+                        {% for article in blogs['blog'].articles limit:250 %}
+                            {% if article.tags contains tag %}
+                            {% assign count = count | plus: 1 %}
+                                {% if count < 4 %}
+                                    
+                                    {% if article.image %}
+                                        <a href="{{ article.url }}">
+                                            {{ article | img_url: '640x335' | img_tag: article.title }}
+                                            <h2>{{ article.title }}</h2>
+                                        </a>
+                                    {% endif %}
+
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <div class="tag-blog-all">
+                        <a href="/blogs/blog/tagged/{{tag | handle}}">Read All</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="current-category h3">
+        <h3 class="ibn_mb">{{ current_tags.first | replace: 'Beard', '' }}</h3>
+        
+
+    </div>
+</div>
+
+{%- endpaginate -%}
+
+{% section 'blog-featured-article' %}
+{% section 'blog-articles-grid' %}
+{% section 'blog-next-category' %}
+
+<style>
+  .current-category h3{
+    color: #bd934a;
+    font-family: Proxima Nova Bold;
+    font-size: 48px;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0 0 40px;
+    line-height: 1;  
+} 
+   @media(min-width:480px){
+    .ibn_mb{text-transform:uppercase !important;}}
+  @media(max-width:480px){
+    .ibn_mb{text-transform:capitalize !important;}}
+</style>
